@@ -10,6 +10,11 @@ var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
 var enterlog = require('./routes/enterlog');
+var help = require('./routes/help');
+var pastlogs = require('./routes/pastlogs');
+var timer = require('./routes/timer');
+var magnifyingglass = require('./routes/magnifyingglass');
+var final = require('./routes/final');
 // Example route
 // var user = require('./routes/user');
 
@@ -36,7 +41,12 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', index.view);
-app.get('/', enterlog.view);
+app.get('/enterlog', enterlog.view);
+app.get('/help', help.view);
+app.get('/pastlogs', pastlogs.view);
+app.get('/timer', timer.view);
+app.get('/magnifyingglass', magnifyingglass.view);
+app.get('/final', final.view);
 // Example route
 // app.get('/users', user.list);
 
