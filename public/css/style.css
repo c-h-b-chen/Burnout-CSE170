@@ -3,15 +3,11 @@
 }
 
 h1 {
-    font-size: 100px;
+    font-size: 50px;
 }
 
 .btn {
-    font-size: 80px;
-}
-
-#question {
-    border-radius: 50%;
+    font-size: 25px;
 }
 
 input[type=text] {
@@ -30,4 +26,13 @@ input[type=text] {
 	height:400px;
 	border-radius: 50%;
 	background: blue;
+}
+
+#login {
+    font-size: 15px;
+}
+
+progress {
+    border: 0px;
+    color: black;
 }

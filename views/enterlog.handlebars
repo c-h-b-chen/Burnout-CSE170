@@ -3,6 +3,8 @@
 <head>
     <!--Title-->
     <title>Enter Log</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--BootStrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel = "stylesheet" href = "/css/style.css">
@@ -10,103 +12,50 @@
 <body>
 
     <!--Empty Section-->
-    <section class = "jumbotron">
-        <div class = "container">
-            <div class = "row">
-            </div>
-        </div>
-    </section>
-
-     <!--Header-->
-     <header class = "container">
-        <div class = "row">
-            <p class = "col-xs-12">
-                <a class = "btn btn-outline-dark" href = "./">&lt;</a>
-            </p>
-        </div>
-    </header>
-
-    <!--Empty Section-->
-    <section class = "jumbotron">
-        <div class = "container">
-            <div class = "row">
-            </div>
-        </div>
-    </section>
+      <section class = "jumbotron">
+      </section>
 
       <!--User Input-->
-      <section class = "jumbotron">
+      <section>
             <div class = "text-center">
                 <form>
-                    <label for="fname"><h1>Enter Log</h1></label>
+                    <label for="fname"><h2>What do you need to get done?</h2></label>
                     <input type="text" id="fname" name="fname">
                 </form>
             </div>
         </section>
 
-        <!--Empty Section-->
-        <section class = "jumbotron">
-            <div class = "container">
-                <div class = "row">
-                </div>
-            </div>
-        </section>
+        <br>
 
-        <!--Empty section-->
-        <section class = "jumbotron">
-            <div class = "container">
-                <div class = "row">
-                </div>
-            </div>
-        </section>
-
-    <!--Go Button-->
-    <section class = "container">
-        <div class = "text-right">
-            <p class = "col-xs-12">
-                <a class = "btn btn-outline-dark" href = "/timer">Next</a>
-            </p>
-        </div>
-    </section>
-
-    <!--Empty section-->
-    <section class = "jumbotron">
-        <div class = "container">
-            <div class = "row">
-            </div>
-        </div>
-    </section>
-
-    <!--Logs Button-->
+    <!--Navigation Buttons-->
     <section class = "container">
         <div class = "text-center">
             <p class = "col-xs-12">
+                <!-- Back to home page -->
+                <a href = "./">
+                    <img 
+                    src = "/images/left-arrow.svg"
+                    alt = "left arrow"
+                    height = "40px"
+                    width = "40px">
+                </a>
+
+                <!--Go to timer page-->
+                <a href = "/timer">
+                    <img 
+                    src = "/images/right-arrow.svg"
+                    alt = "right arrow"
+                    height = "40px"
+                    width = "40px">
+                </a>
             </p>
         </div>
     </section>
 
-    <!--Empty Section-->
-    <section class = "jumbotron">
-        <div class = "container">
-            <div class = "row">
-            </div>
-        </div>
-        </section>
-
-        <!--Empty Section-->
-        <section class = "jumbotron">
-            <div class = "container">
-                <div class = "row">
-                </div>
-            </div>
-        </section>
-
     <!--Footer-->
-    <footer class = "container">
-        <div class = "text-right">
-            <p class = "col-xs-12">
-            </p>
+    <nav class = "navbar fixed-bottom">
+        <div>
+            <progress value="1" max="5"></progress>
         </div>
-    </footer>
 </body>
 </html>
