@@ -28,6 +28,20 @@
                     </p>
                 </div>
             </div>
-        </section>
+            </section>
+
+            {{#each logList}}
+		<div class = "logList">
+			<h2>{{task}}</h2>
+			<p>{{description}}</p>
+		</div>
+		{{/each}}
+
+            <!--{{#each logslist}}
+		<div class = "logslist">
+            <h2>{{task}}</h2>
+			<p>{{description}}</p>
+		</div>
+		{{/each}}-->
 </body>
 </html>
