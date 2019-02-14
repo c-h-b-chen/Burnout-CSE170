@@ -23,8 +23,8 @@ var h;
 function init()
 {
     ball = document.getElementById("ball");
-	 w = (window.innerWidth)/2;
-     h = (window.innerHeight)/2;
+	 w = window.innerWidth;
+     h = window.innerHeight;
 	
 	ball.style.left = (w/2)-50+"px";
 	ball.style.top = (h/2)-50+"px";
@@ -133,7 +133,8 @@ window.onload = function() {
         navigator.getUserMedia = 
         	navigator.getUserMedia ||
         	navigator.webkitGetUserMedia ||
-        	navigator.mozGetUserMedia;
+        	navigator.mozGetUserMedia ||
+        	navigator.msGetUserMedia;
 
         // ask for an audio input
         navigator.getUserMedia(
@@ -201,17 +202,17 @@ var breathTimer = function() {
     i = 0;
   }
  
-  $('h1').fadeOut(3000, function(){
+  $('#breather').fadeOut(2000, function(){
     $(this).text(instructions[i]);
   });
   
-  $('h1').fadeIn(3000);
+  $('#breather').fadeIn(2000);
 
   // increment counter by one
   i++;
 }
 
 $(document).ready(function() {
-  $('h1').text(instructions[i++]); // initialize with first quote
-  setInterval(breathTimer, 5000);
+  $('#breather').text(instructions[i++]); // initialize with first quote
+  setInterval(breathTimer, 4000);
 });

@@ -15,8 +15,8 @@ h1 {
 	-webkit-transition: all;
 	transition: all;
 	position:absolute;
-	width:600px;
-	height:600px;
+	width:300px;
+	height:300px;
 	border-radius: 50%;
 	background: yellow;
 }
@@ -51,12 +51,18 @@ input[type=text], input[type=password] {
 .login {
     padding: 16px;
 }
-
+.fixed-nav-bottom {
+  position: absolute;
+  right: 0;
+  bottom: 100px;
+  left: 0;
+  text-align: center;
+}
 .contentbox {
-	padding: 40px 40px;
+	padding: 10px 10px;
 	text-align: center;
-	height: 800px;
-	width: 800px;
+	height: 50%;
+	width: 70%;
 	background-color: #f44336;
 }
 
