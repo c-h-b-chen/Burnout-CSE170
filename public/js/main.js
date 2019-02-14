@@ -23,8 +23,8 @@ var h;
 function init()
 {
     ball = document.getElementById("ball");
-	 w = window.innerWidth;
-     h = window.innerHeight;
+	 w = (window.innerWidth)/2;
+     h = (window.innerHeight)/2;
 	
 	ball.style.left = (w/2)-50+"px";
 	ball.style.top = (h/2)-50+"px";
@@ -112,8 +112,8 @@ SOFTWARE.
 var audioContext = null;
 var meter = null;
 var canvasContext = null;
-var WIDTH=500;
-var HEIGHT=50;
+var WIDTH=300;
+var HEIGHT=500;
 var rafID = null;
 
 window.onload = function() {
@@ -181,16 +181,16 @@ function drawLoop( time ) {
     if (meter.checkClipping())
         canvasContext.fillStyle = "red";
     else
-        canvasContext.fillStyle = "green";
+        canvasContext.fillStyle = "yellow";
 
     // draw a bar based on the current volume
-    canvasContext.fillRect(0, 0, meter.volume*WIDTH*1.4, HEIGHT);
+    canvasContext.fillRect(150, 0, WIDTH, meter.volume*HEIGHT*4.4);
 
     // set up the next visual callback
     rafID = window.requestAnimationFrame( drawLoop );
 }
 
-var instructions = ["Breathe In", "Breathe Out"];
+var instructions = ["Breathe In", "Breathe Out", "Breathe In", "Breathe Out"];
 
 var i = 0;
 

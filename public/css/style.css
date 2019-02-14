@@ -15,10 +15,10 @@ h1 {
 	-webkit-transition: all;
 	transition: all;
 	position:absolute;
-	width:400px;
-	height:400px;
+	width:600px;
+	height:600px;
 	border-radius: 50%;
-	background: blue;
+	background: yellow;
 }
 
 /* Style login */
@@ -51,6 +51,16 @@ input[type=text], input[type=password] {
 .login {
     padding: 16px;
 }
+
+.contentbox {
+	padding: 40px 40px;
+	text-align: center;
+	height: 800px;
+	width: 800px;
+	background-color: #f44336;
+}
+
+
 
 /* Center the image and position the close button */
 .imgcontainer {
