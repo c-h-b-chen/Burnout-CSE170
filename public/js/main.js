@@ -16,6 +16,8 @@ if ( !window.requestAnimationFrame ) {
  
 }
 
+
+
 var ball;
 var w;
 var h;
@@ -41,7 +43,7 @@ function init()
                                )
     }
     else {
-  	alert("Sorry, your browser doesn't support Device Orientation");
+  	alert("Sorry, your browser doesn't support Device Orientation");
 	} ;
     
     update();
@@ -112,8 +114,8 @@ SOFTWARE.
 var audioContext = null;
 var meter = null;
 var canvasContext = null;
-var WIDTH=500;
-var HEIGHT=50;
+var WIDTH=300;
+var HEIGHT=500;
 var rafID = null;
 
 window.onload = function() {
@@ -133,7 +135,8 @@ window.onload = function() {
         navigator.getUserMedia = 
         	navigator.getUserMedia ||
         	navigator.webkitGetUserMedia ||
-        	navigator.mozGetUserMedia;
+        	navigator.mozGetUserMedia ||
+        	navigator.msGetUserMedia;
 
         // ask for an audio input
         navigator.getUserMedia(
@@ -181,18 +184,20 @@ function drawLoop( time ) {
     if (meter.checkClipping())
         canvasContext.fillStyle = "red";
     else
-        canvasContext.fillStyle = "green";
+        canvasContext.fillStyle = "yellow";
 
     // draw a bar based on the current volume
-    canvasContext.fillRect(0, 0, meter.volume*WIDTH*1.4, HEIGHT);
+    canvasContext.fillRect(150, 0, WIDTH, meter.volume*HEIGHT*4.4);
 
     // set up the next visual callback
     rafID = window.requestAnimationFrame( drawLoop );
 }
 
-var instructions = ["Breathe In", "Breathe Out"];
+var instructions = ["Breathe In", "Breathe Out", "Breathe In", "Breathe Out"];
 
 var i = 0;
+
+
 
 var breathTimer = function() {
   
@@ -201,17 +206,17 @@ var breathTimer = function() {
     i = 0;
   }
  
-  $('h1').fadeOut(3000, function(){
+  $('#breather').fadeOut(2000, function(){
     $(this).text(instructions[i]);
   });
   
-  $('h1').fadeIn(3000);
+  $('#breather').fadeIn(2000);
 
   // increment counter by one
   i++;
 }
 
 $(document).ready(function() {
-  $('h1').text(instructions[i++]); // initialize with first quote
-  setInterval(breathTimer, 5000);
+  $('#breather').text(instructions[i++]); // initialize with first quote
+  setInterval(breathTimer, 4000);
 });
