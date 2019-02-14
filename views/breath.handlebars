@@ -2,8 +2,6 @@
 <html>
 <head>
 	<title>Breathe</title>
-	<script src="js/volume-meter.js"></script>
-	<script src="js/main.js"></script>
 </head>
 <body>
 
@@ -15,23 +13,23 @@
 <!--BootStrap-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src= "js/main.js"></script>
+<script src="js/volume-meter.js"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 <link rel = "stylesheet" href = "/css/style.css">
 </head>
+
 <body>
 
-	<!--Empty Section-->
-	<section class = "jumbotron">
-	</section>
 
-	<canvas id="meter" width="300" height="200"></canvas>
-
+	<div class = "contentbox">
+		<canvas id="meter" width="300" height="200"></canvas>
+	</div>
 	<!--Breathe In/Breathe Out-->
-	<section class = "jumbotron">
-		<div class = "text-center">
-			<h1 id="breather"></h1>
+
+		<div class = "contentbox">
+			<h1 class="breather"></h1>
 		</div>
-	</section>
+
 
 	<!--Navigation Buttons-->
 	<section class = "container">

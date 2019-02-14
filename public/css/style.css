@@ -59,11 +59,11 @@ input[type=text], input[type=password] {
   text-align: center;
 }
 .contentbox {
-	padding: 10px 10px;
-	text-align: center;
-	height: 50%;
-	width: 70%;
-	background-color: #f44336;
+	padding: 5px;
+	margin: auto;
+	text-align: center !important;
+	width: 300px;
+	background-color: white;
 }
 
 

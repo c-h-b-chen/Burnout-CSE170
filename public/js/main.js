@@ -1,22 +1,22 @@
+
+//Magnifying Glass
 if ( !window.requestAnimationFrame ) {
- 
-    window.requestAnimationFrame = ( function() {
- 
-        return window.webkitRequestAnimationFrame ||
-        window.mozRequestAnimationFrame ||
-        window.oRequestAnimationFrame ||
-        window.msRequestAnimationFrame ||
-        function( /* function FrameRequestCallback */ callback, /* DOMElement Element */ element ) {
- 
-            window.setTimeout( callback, 1000 / 60 );
- 
-        };
- 
-    } )();
- 
+
+	window.requestAnimationFrame = ( function() {
+
+		return window.webkitRequestAnimationFrame ||
+		window.mozRequestAnimationFrame ||
+		window.oRequestAnimationFrame ||
+		window.msRequestAnimationFrame ||
+		function( /* function FrameRequestCallback */ callback, /* DOMElement Element */ element ) {
+
+			window.setTimeout( callback, 1000 / 60 );
+
+		};
+
+	} )();
+
 }
-
-
 
 var ball;
 var w;
@@ -24,69 +24,63 @@ var h;
 
 function init()
 {
-    ball = document.getElementById("ball");
-	 w = window.innerWidth;
-     h = window.innerHeight;
+	ball = document.getElementById("ball");
+	w = window.innerWidth;
+	h = window.innerHeight;
 	
 	ball.style.left = (w/2)-50+"px";
 	ball.style.top = (h/2)-50+"px";
 	ball.velocity = {x:0,y:0}
 	ball.position = {x:0,y:0}
-    
-    if (window.DeviceOrientationEvent) {
+
+	if (window.DeviceOrientationEvent) {
 		
 		window.addEventListener("deviceorientation", function(event) 
 		{
 			ball.velocity.y = Math.round(event.beta);
 			ball.velocity.x = Math.round(event.gamma);
-        }
-                               )
-    }
-    else {
-  	alert("Sorry, your browser doesn't support Device Orientation");
+		}
+		)
+	}
+	else {
+		alert("Sorry, your browser doesn't support Device Orientation");
 	} ;
-    
-    update();
+
+	update();
 }
 
 function update()
 {
-        ball.position.x += ball.velocity.x;
-        ball.position.y += ball.velocity.y;
-        
-        if(ball.position.x > (w-100) && ball.velocity.x > 0)
-			{
-			   ball.position.x = w-100;
-			}
-			
-			if(ball.position.x < 0 && ball.velocity.x < 0)
-			{
-				ball.position.x = 0;
-			}
-			
-			if(ball.position.y > (h-100) && ball.velocity.y > 0)
-			{
-			   ball.position.y = h-100;
-			}
-			
-			if(ball.position.y < 0 && ball.velocity.y < 0)
-			{
-			   ball.position.y = 0;
-			}
-    
-    ball.style.top = ball.position.y + "px"
-        ball.style.left = ball.position.x + "px"
-    
+	ball.position.x += ball.velocity.x;
+	ball.position.y += ball.velocity.y;
+
+	if(ball.position.x > (w-100) && ball.velocity.x > 0)
+	{
+		ball.position.x = w-100;
+	}
+
+	if(ball.position.x < 0 && ball.velocity.x < 0)
+	{
+		ball.position.x = 0;
+	}
+
+	if(ball.position.y > (h-100) && ball.velocity.y > 0)
+	{
+		ball.position.y = h-100;
+	}
+
+	if(ball.position.y < 0 && ball.velocity.y < 0)
+	{
+		ball.position.y = 0;
+	}
+
+	ball.style.top = ball.position.y + "px"
+	ball.style.left = ball.position.x + "px"
+
     requestAnimationFrame( update );//KEEP ANIMATING
 }
 
-//Timer
-var myVar = setInterval(myTimer, 1000);
 
-function myTimer() {
-  var d = new Date();
-  document.getElementById("demo").innerHTML = d.toLocaleTimeString();
-}
 
 /*
 The MIT License (MIT)
@@ -121,11 +115,11 @@ var rafID = null;
 window.onload = function() {
 
     // grab our canvas
-	canvasContext = document.getElementById( "meter" ).getContext("2d");
-	
+    canvasContext = document.getElementById( "meter" ).getContext("2d");
+
     // monkeypatch Web Audio
     window.AudioContext = window.AudioContext || window.webkitAudioContext;
-	
+
     // grab an audio context
     audioContext = new AudioContext();
 
@@ -133,33 +127,33 @@ window.onload = function() {
     try {
         // monkeypatch getUserMedia
         navigator.getUserMedia = 
-        	navigator.getUserMedia ||
-        	navigator.webkitGetUserMedia ||
-        	navigator.mozGetUserMedia ||
-        	navigator.msGetUserMedia;
+        navigator.getUserMedia ||
+        navigator.webkitGetUserMedia ||
+        navigator.mozGetUserMedia ||
+        navigator.msGetUserMedia;
 
         // ask for an audio input
         navigator.getUserMedia(
         {
-            "audio": {
-                "mandatory": {
-                    "googEchoCancellation": "false",
-                    "googAutoGainControl": "false",
-                    "googNoiseSuppression": "false",
-                    "googHighpassFilter": "false"
-                },
-                "optional": []
-            },
+        	"audio": {
+        		"mandatory": {
+        			"googEchoCancellation": "false",
+        			"googAutoGainControl": "false",
+        			"googNoiseSuppression": "false",
+        			"googHighpassFilter": "false"
+        		},
+        		"optional": []
+        	},
         }, gotStream, didntGetStream);
     } catch (e) {
-        alert('getUserMedia threw exception :' + e);
+    	alert('getUserMedia threw exception :' + e);
     }
 
 }
 
 
 function didntGetStream() {
-    alert('Stream generation failed.');
+	alert('Stream generation failed.');
 }
 
 var mediaStreamSource = null;
@@ -182,41 +176,28 @@ function drawLoop( time ) {
 
     // check if we're currently clipping
     if (meter.checkClipping())
-        canvasContext.fillStyle = "red";
+    	canvasContext.fillStyle = "red";
     else
-        canvasContext.fillStyle = "yellow";
+    	canvasContext.fillStyle = "yellow";
 
     // draw a bar based on the current volume
-    canvasContext.fillRect(150, 0, WIDTH, meter.volume*HEIGHT*4.4);
+    canvasContext.fillRect(0, 0, WIDTH, meter.volume*HEIGHT*4.4);
 
     // set up the next visual callback
     rafID = window.requestAnimationFrame( drawLoop );
 }
 
-var instructions = ["Breathe In", "Breathe Out", "Breathe In", "Breathe Out"];
+//Breath
 
-var i = 0;
-
-
-
-var breathTimer = function() {
-  
-  // if at end of array, reset
-  if (i >= instructions.length) {
-    i = 0;
-  }
- 
-  $('#breather').fadeOut(2000, function(){
-    $(this).text(instructions[i]);
-  });
-  
-  $('#breather').fadeIn(2000);
-
-  // increment counter by one
-  i++;
-}
+var texts = ["Breathe Out", "Breathe In", "Breathe Out", "Breathe In"]
+var count = 0;
 
 $(document).ready(function() {
-  $('#breather').text(instructions[i++]); // initialize with first quote
-  setInterval(breathTimer, 4000);
+  function changeText() {
+    $(".breather").fadeOut(300, function () {
+      $(this).html(texts[count]).fadeIn(250);
+    });
+    count < texts.length ? count++ : count = 0;
+  }
+  setInterval(changeText, 3000);
 });
