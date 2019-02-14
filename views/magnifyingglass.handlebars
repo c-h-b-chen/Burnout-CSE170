@@ -7,15 +7,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel = "stylesheet" href = "/css/style.css">
     <script src="js/main.js"></script>
-         <!--Back Button-->
-     <header class = "container">
-        <div class = "row">
-            <p class = "col-xs-12">
-                <a class = "btn btn-outline-dark" href = "/timer">&lt;</a>
-            </p>
-        </div>
-    </header>
 </head>
+
 <body onload="init()">
     <div id="ball"></div>
 <!--Go Button-->
@@ -23,6 +16,26 @@
         <div class = "text-right">
             <p class = "col-xs-12">
                 <a class = "btn btn-outline-dark" href = "/breath">Next</a>
+    <!--Navigation Buttons-->
+    <section class = "container">
+        <div class = "text-center">
+            <p class = "col-xs-12">
+                <!--Back to timer-->
+                <a href = "/timer">
+                    <img 
+                    src = "/images/left-arrow.svg"
+                    alt = "left arrow"
+                    height = "40px"
+                    width = "40px">
+                </a>
+                <!--Go to breathing-->
+                <a href = "/breath">
+                    <img 
+                    src = "/images/right-arrow.svg"
+                    alt = "right arrow"
+                    height = "40px"
+                    width = "40px">
+                </a>
             </p>
         </div>
     </section>

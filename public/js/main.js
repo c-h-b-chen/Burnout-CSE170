@@ -16,8 +16,6 @@ if ( !window.requestAnimationFrame ) {
  
 }
 
-
-
 var ball;
 var w;
 var h;
@@ -191,3 +189,29 @@ function drawLoop( time ) {
     // set up the next visual callback
     rafID = window.requestAnimationFrame( drawLoop );
 }
+
+var instructions = ["Breathe In", "Breathe Out"];
+
+var i = 0;
+
+var breathTimer = function() {
+  
+  // if at end of array, reset
+  if (i >= instructions.length) {
+    i = 0;
+  }
+ 
+  $('h1').fadeOut(3000, function(){
+    $(this).text(instructions[i]);
+  });
+  
+  $('h1').fadeIn(3000);
+
+  // increment counter by one
+  i++;
+}
+
+$(document).ready(function() {
+  $('h1').text(instructions[i++]); // initialize with first quote
+  setInterval(breathTimer, 5000);
+});

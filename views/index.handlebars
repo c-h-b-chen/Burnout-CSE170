@@ -3,6 +3,8 @@
 <head>
     <!--Title-->
     <title>Home Page</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--BootStrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel = "stylesheet" href = "/css/style.css">
@@ -10,42 +12,16 @@
 <body>
 
     <!--Empty Section-->
-    <section class = "jumbotron">
-        <div class = "container">
-            <div class = "row">
-            </div>
-        </div>
-    </section>
-
-    <!--Empty Section-->
-    <section class = "jumbotron">
-        <div class = "container">
-            <div class = "row">
-            </div>
-        </div>
-    </section>
+      <section class = "jumbotron">
+      </section>
 
       <!--Burnout Logo-->
-      <section class = "container">
-            <div class = "text-center">
-                <p>
-                    <h1>Burnout</h1>
-                </p>
-            </div>
-        </section>
-
-        <!--Empty Section-->
-        <section class = "jumbotron">
+      <section class = "jumbotron">
             <div class = "container">
-                <div class = "row">
-                </div>
-            </div>
-        </section>
-
-        <!--Empty section-->
-        <section class = "jumbotron">
-            <div class = "container">
-                <div class = "row">
+                <div class = "text-center">
+                    <p>
+                        <h1>Burnout</h1>
+                    </p>
                 </div>
             </div>
         </section>
@@ -54,51 +30,72 @@
     <section class = "container">
         <div class = "text-center">
             <p class = "col-xs-12">
+                <!--Go to enter logs page -->
                 <a class = "btn btn-outline-dark" href = "/enterlog">Go</a>
             </p>
         </div>
     </section>
 
-    <!--Empty section-->
-    <section class = "jumbotron">
-        <div class = "container">
-            <div class = "row">
-            </div>
-        </div>
-    </section>
-
-    <!--Logs Button-->
-    <section class = "container">
+     <!--Log In Button-->
+    <section class = "login container">
         <div class = "text-center">
-            <p class = "col-xs-12">
-                <a class = "btn btn-outline-dark" href = "/pastlogs">Logs</a>
-            </p>
+            <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;" id = "login" class = "btn btn-outline-dark" href = "#">Log In</a>
+        </div>
+        <div id="id01" class="modal">
+            <form class="modal-content animate">
+                <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close">&times;</span>
+                </div>
+
+                <div class="login container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname">
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw">
+                    
+                <a style="width:auto;" id = "login" class = "btn btn-outline-dark" href = "#">Submit</a>
+                </div>
+            </form>
         </div>
     </section>
-
-    <!--Empty Section-->
-    <section class = "jumbotron">
-        <div class = "container">
-            <div class = "row">
-            </div>
-        </div>
-        </section>
-
-        <!--Empty Section-->
-        <section class = "jumbotron">
-            <div class = "container">
-                <div class = "row">
-                </div>
-            </div>
-        </section>
 
     <!--Footer-->
-    <footer class = "container">
-        <div class = "text-right">
-            <p class = "col-xs-12">
-                <a class = "btn btn-outline-dark" id = "question" href = "/help">?</a>
-            </p>
+    <nav class = "navbar fixed-bottom">
+        <div>
+
+            <!-- Past Logs -->
+            <a href = "/pastlogs">
+                <img 
+                src = "/images/history-clock-button.svg"
+                alt = "profile"
+                height = "25px"
+                width = "25px">
+            </a>
+            &nbsp;
+            &nbsp;
+            <!--Help Page -->
+            <a href = "/help">
+                <img 
+                src = "/images/information.svg"
+                alt = "help"
+                height = "25px"
+                width = "25px">
+            </a>
         </div>
-    </footer>
+    </nav>
+
+    <!-- JavaScript Function -->
+    <script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
 </body>
 </html>
