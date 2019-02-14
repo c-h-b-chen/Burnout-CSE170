@@ -16,6 +16,8 @@ if ( !window.requestAnimationFrame ) {
  
 }
 
+
+
 var ball;
 var w;
 var h;
@@ -41,7 +43,7 @@ function init()
                                )
     }
     else {
-  	alert("Sorry, your browser doesn't support Device Orientation");
+  	alert("Sorry, your browser doesn't support Device Orientation");
 	} ;
     
     update();
@@ -194,6 +196,8 @@ function drawLoop( time ) {
 var instructions = ["Breathe In", "Breathe Out", "Breathe In", "Breathe Out"];
 
 var i = 0;
+
+
 
 var breathTimer = function() {
   
