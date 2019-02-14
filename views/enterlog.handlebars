@@ -7,7 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--BootStrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel = "stylesheet" href = "/css/style.css">  
+    <link rel = "stylesheet" href = "/css/style.css">
+
 </head>
 <body>
 
@@ -25,6 +26,32 @@
 
         <br>
 
+     <!--Log In Button-->
+    <section class = "login container">
+        <div class = "text-center">
+            <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;" id = "login" class = "btn btn-outline-dark" href = "#">Sumbit</a>
+        </div>
+        <div id="id01" class="modal">
+            <form class="modal-content animate">
+                <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close">&times;</span>
+                </div>
+
+                <div class="login container">
+                <label for="uname"><b>How long do you want to spend on this task?</b></label>
+
+                <script>
+                $(function() {
+                    $('#timeformatExample1').timepicker({ 'timeFormat': 'H:i:s' });
+                    $('#timeformatExample2').timepicker({ 'timeFormat': 'h:i A' });
+                });
+                </script>
+
+                <a style="width:auto;" id = "login" class = "btn btn-outline-dark" href = "#">Submit</a>
+                </div>
+            </form>
+        </div>
+    </section>
     <!--Navigation Buttons-->
     <section class = "container">
         <div class = "text-center">
