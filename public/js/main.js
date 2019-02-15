@@ -1,3 +1,14 @@
+//JSON Time
+
+var times = {
+	"30": 30,
+	"35": 35,
+	"40": 40,
+	"45": 45,
+	"50": 50,
+	"55": 55,
+	"60": 60
+}
 
 //Magnifying Glass
 if ( !window.requestAnimationFrame ) {
@@ -205,5 +216,6 @@ $(document).ready(function() {
 		clearInterval(interv);
 	}
 });
+
 
 

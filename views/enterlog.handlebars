@@ -17,6 +17,14 @@
 
   <!--User Input-->
   <section>
+    <a class="text-left" href = "./">
+        <img 
+        src = "/images/left-arrow.svg"
+        alt = "left arrow"
+        height = "20px"
+        width = "20px"
+        style = "margin: 10px;">
+    </a>
     <div class = "contentbox">
         <h2>What do you need to get done today?</h2>
         <input type = "text">
@@ -27,7 +35,7 @@
 <!--Log In Button-->
 <section class = "login container">
     <div class = "text-center">
-        <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;" id = "login" class = "btn btn-outline-dark" href = "#">Sumbit</a>
+        <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;" id = "login" class = "btn btn-outline-dark" href = "#">Submit</a>
     </div>
     <div id="id01" class="modal">
         <form class="modal-content animate">
@@ -36,7 +44,7 @@
             </div>
             <div class="login container">
                 <label for="uname">
-                    <p>How long do you want to spend on this task?</p>
+                    <p>How many minutes would you like to spend on this task?</p>
                 </label>
                 <select style="bottom: auto;padding: 10px;background: whitesmoke;margin: 10px 20px;border-radius: .25rem;">
                     <option value="30">30</option>
@@ -47,42 +55,18 @@
                     <option value="55">55</option>
                     <option value="60">60</option>
                 </select>
-                <span onclick="document.getElementById('id01').style.display='none'" style="width:auto;" id = "login" class = "btn btn-outline-dark" href = "#">Submit</span>
+                <span onclick="window.location.href='/magnifyingglass'" style="width:auto;" id = "login" class = "btn btn-outline-dark" href = "#">Go</span>
             </div>
         </form>
     </div>
 </section>
 
-<!--Navigation Buttons-->
-<section class = "container">
-    <div class = "fixed-nav-bottom">
-        <p class = "col-xs-12">
-            <!-- Back to home page -->
-            <a href = "./">
-                <img 
-                src = "/images/left-arrow.svg"
-                alt = "left arrow"
-                height = "40px"
-                width = "40px">
-            </a>
-
-            <!--Go to magnifying glass page-->
-            <a href = "/magnifyingglass" >
-                <img 
-                src = "/images/right-arrow.svg"
-                alt = "right arrow"
-                height = "40px"
-                width = "40px">
-            </a>
-        </p>
-    </div>
-</section>
 
 <!--Footer-->
-    <nav class = "navbar fixed-bottom">
-        <div>
-            <progress value="1" max="4"></progress>
-        </div>
-    </nav>
+<nav class = "navbar fixed-bottom">
+    <div>
+        <progress value="1" max="4"></progress>
+    </div>
+</nav>
 </body>
 </html>
