@@ -46,6 +46,8 @@ input[type=text], input[type=password] {
 
   #login {
     font-size: 15px;
+    text-align: center;
+    margin: auto;
 }
 
 .login {
@@ -65,7 +67,11 @@ input[type=text], input[type=password] {
 	width: 300px;
 	background-color: white;
 }
-
+.meterbox{
+	padding:5px;
+	margin:auto;
+	background-color:white;
+}
 
 
 /* Center the image and position the close button */

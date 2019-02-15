@@ -189,15 +189,21 @@ function drawLoop( time ) {
 
 //Breath
 
-var texts = ["Breathe Out", "Breathe In", "Breathe Out", "Breathe In"]
+
+var texts = ["Breathe Out", "Breathe In", "Breathe Out", "Breathe In", "Breathe Out","Proceed"]
 var count = 0;
 
 $(document).ready(function() {
-  function changeText() {
-    $(".breather").fadeOut(300, function () {
-      $(this).html(texts[count]).fadeIn(250);
-    });
-    count < texts.length ? count++ : count = 0;
-  }
-  setInterval(changeText, 3000);
+	function fadeText() {
+		$(".breather").fadeOut(300, function () {
+			$(this).html(texts[count]).fadeIn(250);
+		});
+		if(count < texts.length) {count++;}
+	}
+	interv = setInterval(fadeText, 5000);
+	if(count > texts.length) {
+		clearInterval(interv);
+	}
 });
+
+

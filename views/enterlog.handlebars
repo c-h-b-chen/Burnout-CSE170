@@ -4,80 +4,85 @@
     <!--Title-->
     <title>Enter Log</title>
     <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--BootStrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel = "stylesheet" href = "/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/jquery.timepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
 
 </head>
 <body>
 
-      <!--User Input-->
-      <section>
-            <div class = "contentbox">
-                    <h2>What do you need to get done today?</h2>
-                    <input type = "text">
-            </div>
-        </section>
-        <br>
+  <!--User Input-->
+  <section>
+    <div class = "contentbox">
+        <h2>What do you need to get done today?</h2>
+        <input type = "text">
+    </div>
+</section>
+<br>
 
-     <!--Log In Button-->
-    <section class = "login container">
-        <div class = "text-center">
-            <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;" id = "login" class = "btn btn-outline-dark" href = "#">Sumbit</a>
-        </div>
-        <div id="id01" class="modal">
-            <form class="modal-content animate">
-                <div class="imgcontainer">
+<!--Log In Button-->
+<section class = "login container">
+    <div class = "text-center">
+        <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;" id = "login" class = "btn btn-outline-dark" href = "#">Sumbit</a>
+    </div>
+    <div id="id01" class="modal">
+        <form class="modal-content animate">
+            <div class="imgcontainer">
                 <span onclick="document.getElementById('id01').style.display='none'" class="close">&times;</span>
-                </div>
+            </div>
+            <div class="login container">
+                <label for="uname">
+                    <p>How long do you want to spend on this task?</p>
+                </label>
+                <select style="bottom: auto;padding: 10px;background: whitesmoke;margin: 10px 20px;border-radius: .25rem;">
+                    <option value="30">30</option>
+                    <option value="35">35</option>
+                    <option value="40">40</option>
+                    <option value="45">45</option>
+                    <option value="50">50</option>
+                    <option value="55">55</option>
+                    <option value="60">60</option>
+                </select>
+                <a style="width:auto, text-center:auto;" id = "login" class = "btn btn-outline-dark" href = "#">Submit</a>
+            </div>
+        </form>
+    </div>
+</section>
 
-                <div class="login container">
-                <label for="uname"><b>How long do you want to spend on this task?</b></label>
+<!--Navigation Buttons-->
+<section class = "container">
+    <div class = "fixed-nav-bottom">
+        <p class = "col-xs-12">
+            <!-- Back to home page -->
+            <a href = "./">
+                <img 
+                src = "/images/left-arrow.svg"
+                alt = "left arrow"
+                height = "40px"
+                width = "40px">
+            </a>
 
-                <script>
-                $(function() {
-                    $('#timeformatExample1').timepicker({ 'timeFormat': 'H:i:s' });
-                    $('#timeformatExample2').timepicker({ 'timeFormat': 'h:i A' });
-                });
-                </script>
+            <!--Go to timer page-->
+            <a href = "/timer" >
+                <img 
+                src = "/images/right-arrow.svg"
+                alt = "right arrow"
+                height = "40px"
+                width = "40px">
+            </a>
+        </p>
+    </div>
+</section>
 
-                <a style="width:auto;" id = "login" class = "btn btn-outline-dark" href = "#">Submit</a>
-                </div>
-            </form>
-        </div>
-    </section>
-
-    <!--Navigation Buttons-->
-    <section class = "container">
-        <div class = "fixed-nav-bottom">
-            <p class = "col-xs-12">
-                <!-- Back to home page -->
-                <a href = "./">
-                    <img 
-                    src = "/images/left-arrow.svg"
-                    alt = "left arrow"
-                    height = "40px"
-                    width = "40px">
-                </a>
-
-                <!--Go to timer page-->
-                <a href = "/timer" >
-                    <img 
-                    src = "/images/right-arrow.svg"
-                    alt = "right arrow"
-                    height = "40px"
-                    width = "40px">
-                </a>
-            </p>
-        </div>
-    </section>
-
-    <!--Footer-->
-    <nav class = "fixed-bottom">
-        <div class="progress">
-            <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-    </nav>
+<!--Footer-->
+<nav class = "fixed-bottom">
+    <div class="progress">
+        <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+</nav>
 </body>
 </html>
