@@ -8,11 +8,18 @@
     <!--BootStrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel = "stylesheet" href = "/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
 </head>
 
 <body onload="init()">
-    <div id ="magInstruct"></div>
+    <script>
+        $(document).ready(function() {
+    // document is loaded and DOM is ready
+    alert("Focus on keeping the circle in the middle of the screen. Advance when you feel ready.");
+});
+    </script>
+    <div class="magPage"></div>
     <div id="ball"></div>
     <div class="container" 
     <!--Navigation Buttons-->
