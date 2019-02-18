@@ -11,7 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="js/jquery.timepicker.js"></script>
     <script src="js/jquery.timepicker.min.js"></script>
-
+    <script src="js/test.js"></script>
 </head>
 <body>
 
@@ -24,18 +24,20 @@
 </section>
 <br>
 
-<!--Log In Button-->
-<section class = "login container">
+<!--Submit Button-->
+<section class = "container">
     <div class = "text-center">
-        <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;" id = "login" class = "btn btn-outline-dark" href = "#">Sumbit</a>
+        <a onclick="document.getElementById('id01').style.display='block'" class = "btn btn-outline-dark" href = "#">Sumbit</a>
     </div>
+
+    <!--Timer Selector-->
     <div id="id01" class="modal">
         <form class="modal-content animate">
-            <div class="imgcontainer">
+            <div>
                 <span onclick="document.getElementById('id01').style.display='none'" class="close">&times;</span>
             </div>
-            <div class="login container">
-                <label for="uname">
+            <div class="container">
+                <label class = "label" for="uname">
                     <p>How long do you want to spend on this task?</p>
                 </label>
                 <select style="bottom: auto;padding: 10px;background: whitesmoke;margin: 10px 20px;border-radius: .25rem;">
@@ -47,7 +49,7 @@
                     <option value="55">55</option>
                     <option value="60">60</option>
                 </select>
-                <span onclick="document.getElementById('id01').style.display='none'" style="width:auto;" id = "login" class = "btn btn-outline-dark" href = "#">Submit</span>
+                <span style = "font-size: 15px;" onclick="document.getElementById('id01').style.display='none'" class = "btn btn-outline-dark" href = "#">Submit</span>
             </div>
         </form>
     </div>

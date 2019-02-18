@@ -37,13 +37,6 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
   }
 
-
-  #login {
-    font-size: 15px;
-    text-align: center;
-    margin: auto;
-}
-
 .login {
     padding: 16px;
 }
@@ -66,14 +59,6 @@ input[type=text], input[type=password] {
 	margin:auto;
 	background-color:white;
 }
-
-
-/* Center the image and position the close button */
-.imgcontainer {
-    text-align: center;
-    margin: 10px 0 12px 0;
-    position: relative;
-  }
 
   /* The Modal (background) */
 .modal {
@@ -99,13 +84,16 @@ input[type=text], input[type=password] {
     width: 80%;
   }
   
+  .label {
+    margin: 25px;
+  }
+
   /* The Close Button (x) */
   .close {
     position: absolute;
-    right: 25px;
-    top: 0;
+    right: 10px;
     color: #000;
-    font-size: 35px;
+    font-size: 25px;
     font-weight: bold;
   }
   
