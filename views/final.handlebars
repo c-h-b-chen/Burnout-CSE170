@@ -4,7 +4,7 @@
     <!--Title-->
     <title>Final</title>
     <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--BootStrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel = "stylesheet" href = "/css/style.css">
@@ -12,42 +12,52 @@
 <body>
 
     <!--Empty Section-->
-      <section class = "jumbotron">
-      </section>
+    <section class = "jumbotron">
+    </section>
 
-      <!--Title-->
-      <section>
-            <div class = "text-center">
-                <h2>Nice!</h2>
-                <h6>Place your phone face down</h6>
-                <h6>away from you</h6>
-                <h6>The timer will begin shortly</h6>
-            </div>
-        </section>
-
-        <br>
-
-    <!--Navigation Buttons-->
-    <section class = "container">
-        <div class = "fixed-nav-bottom">
-            <p class = "col-xs-12">
-                <!--Back to breathingr-->
-                <a href = "/breath">
-                    <img 
-                    src = "/images/left-arrow.svg"
-                    alt = "left arrow"
-                    height = "40px"
-                    width = "40px">
-                </a>
-            </p>
+    <!--Title-->
+    <section>
+        <div class = "text-center">
+            <h2>Nice!</h2>
+            <h6>Place your phone face down</h6>
+            <h6>away from you</h6>
+            <h6>The timer will begin shortly</h6>
         </div>
     </section>
 
-    <!--Footer-->
-    <nav class = "navbar fixed-bottom">
-        <div>
-            <progress value="4" max="4"></progress>
-        </div>
-    </nav>
+
+
+    <script>
+//Using setTimeout to execute a function after 5 seconds.
+setTimeout(function () {
+   //Redirect with JavaScript
+   window.location.href= '/timer';
+}, 5000);
+</script>
+
+<br>
+
+<!--Navigation Buttons-->
+<section class = "container">
+    <div class = "fixed-nav-bottom">
+        <p class = "col-xs-12">
+            <!--Back to breathingr-->
+            <a href = "/breath">
+                <img 
+                src = "/images/left-arrow.svg"
+                alt = "left arrow"
+                height = "40px"
+                width = "40px">
+            </a>
+        </p>
+    </div>
+</section>
+
+<!--Footer-->
+<nav class = "navbar fixed-bottom">
+    <div>
+        <progress value="4" max="4"></progress>
+    </div>
+</nav>
 </body>
 </html>

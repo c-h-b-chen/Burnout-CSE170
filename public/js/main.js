@@ -1,3 +1,14 @@
+//JSON Time
+
+var times = {
+	"30": 30,
+	"35": 35,
+	"40": 40,
+	"45": 45,
+	"50": 50,
+	"55": 55,
+	"60": 60
+}
 
 //Magnifying Glass
 if ( !window.requestAnimationFrame ) {
@@ -81,22 +92,17 @@ function update()
 }
 
 
-
 /*
 The MIT License (MIT)
-
 Copyright (c) 2014 Chris Wilson
-
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
-
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
-
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -115,11 +121,11 @@ var rafID = null;
 window.onload = function() {
 
     // grab our canvas
-    canvasContext = document.getElementById( "meter" ).getContext("2d");
-
+	canvasContext = document.getElementById( "meter" ).getContext("2d");
+	
     // monkeypatch Web Audio
     window.AudioContext = window.AudioContext || window.webkitAudioContext;
-
+	
     // grab an audio context
     audioContext = new AudioContext();
 
@@ -127,33 +133,32 @@ window.onload = function() {
     try {
         // monkeypatch getUserMedia
         navigator.getUserMedia = 
-        navigator.getUserMedia ||
-        navigator.webkitGetUserMedia ||
-        navigator.mozGetUserMedia ||
-        navigator.msGetUserMedia;
+        	navigator.getUserMedia ||
+        	navigator.webkitGetUserMedia ||
+        	navigator.mozGetUserMedia;
 
         // ask for an audio input
         navigator.getUserMedia(
         {
-        	"audio": {
-        		"mandatory": {
-        			"googEchoCancellation": "false",
-        			"googAutoGainControl": "false",
-        			"googNoiseSuppression": "false",
-        			"googHighpassFilter": "false"
-        		},
-        		"optional": []
-        	},
+            "audio": {
+                "mandatory": {
+                    "googEchoCancellation": "false",
+                    "googAutoGainControl": "false",
+                    "googNoiseSuppression": "false",
+                    "googHighpassFilter": "false"
+                },
+                "optional": []
+            },
         }, gotStream, didntGetStream);
     } catch (e) {
-    	alert('getUserMedia threw exception :' + e);
+        alert('getUserMedia threw exception :' + e);
     }
 
 }
 
 
 function didntGetStream() {
-	alert('Stream generation failed.');
+    alert('Stream generation failed.');
 }
 
 var mediaStreamSource = null;
@@ -176,9 +181,9 @@ function drawLoop( time ) {
 
     // check if we're currently clipping
     if (meter.checkClipping())
-    	canvasContext.fillStyle = "red";
+        canvasContext.fillStyle = "red";
     else
-    	canvasContext.fillStyle = "yellow";
+        canvasContext.fillStyle = "yellow";
 
     // draw a bar based on the current volume
     canvasContext.fillRect(0, 0, WIDTH, meter.volume*HEIGHT*4.4);
@@ -186,6 +191,7 @@ function drawLoop( time ) {
     // set up the next visual callback
     rafID = window.requestAnimationFrame( drawLoop );
 }
+
 
 //Breath
 
@@ -195,7 +201,7 @@ var count = 0;
 
 $(document).ready(function() {
 	function fadeText() {
-		$(".breather").fadeOut(300, function () {
+		$(".breather").fadeOut(500, function () {
 			$(this).html(texts[count]).fadeIn(250);
 		});
 		if(count < texts.length) {count++;}
@@ -205,5 +211,6 @@ $(document).ready(function() {
 		clearInterval(interv);
 	}
 });
+
 
 
