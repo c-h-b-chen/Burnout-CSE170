@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel = "stylesheet" href = "/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="js/timer.js"></script>
+    <script src="js/setTimer.js"></script>
 </head>
 <body>
   <!--User Input-->
@@ -31,10 +31,11 @@
 
               <input type="text" class="form-control" id="inputLog" placeholder="I need to..." name="inputLog">
           </div>
-
-          <input onclick="document.getElementById('id01').style.display='block'" type="submit" id="submitBtn" class="btn btn-outline-dark" value="Submit"></input>
-      </form>
-  </div>
+          
+        <input onclick="document.getElementById('id01').style.display='block'" type="submit" id="submitBtn" class="btn btn-outline-dark" value="Submit"></input>
+    </form>
+    
+</div>
 
 
 </section>
@@ -48,32 +49,33 @@
             <span onclick="document.getElementById('id01').style.display='none'" class="close">&times;</span>
         </div>
         <div class="container">
-            <label class = "label" for="uname">
-                <p>How long do you want to spend on this task?</p>
-            </label>
-            <select onchange="setTime()" name="inputTime" id="inputTime" style="bottom: auto;padding: 10px;background: whitesmoke;margin: 10px 20px;border-radius: .25rem;">
-                <option value="30">30</option>
-                <option value="35">35</option>
-                <option value="40">40</option>
-                <option value="45">45</option>
-                <option value="50">50</option>
-                <option value="55">55</option>
-                <option value="60">60</option>
-            </select>
-        <span style = "font-size: 15px;" onclick="window.location.href='/breath'" class = "btn btn-outline-dark" href = "#">Submit</span>
-        </div>
+            <form role="form" method="get" action="/addTime">
+                <label class = "label" for="uname">
+                    <p>How long do you want to spend on this task?</p>
+                </label>
+                <select name="inputTime" id="inputTime" style="bottom: auto;padding: 10px;background: whitesmoke;margin: 10px 20px;border-radius: .25rem;">
+                    <option value="30">30</option>
+                    <option value="35">35</option>
+                    <option value="40">40</option>
+                    <option value="45">45</option>
+                    <option value="50">50</option>
+                    <option value="55">55</option>
+                    <option value="60">60</option>
+                </select>
+                <span style = "font-size: 15px;" onclick="setTime()" class = "btn btn-outline-dark" href = "#">Submit</span>
+            </div>
 
-    </form>
-</div>
-
-
-
-
-<!--Footer-->
-<nav class = "navbar fixed-bottom">
-    <div>
-        <p><b>1/5</b></p>
+        </form>
     </div>
-</nav>
+
+
+
+
+    <!--Footer-->
+    <nav class = "navbar fixed-bottom">
+        <div>
+            <p><b>1/5</b></p>
+        </div>
+    </nav>
 </body>
 </html>

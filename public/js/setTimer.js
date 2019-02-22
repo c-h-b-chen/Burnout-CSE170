@@ -2,7 +2,12 @@
 var timeChoice = 30; // jquery to get read time input read data from ID example (time) click listener runs a function. dont need to be inside jason file
 
 function setTime() {
-    timeChoice = document.getElementById('inputTime').value;
+    var input = document.getElementById("inputTime").value;
+    var taskIn = document.getElementById("inputLog").value;
+    console.log("message "+input+taskIn);
+    sessionStorage.setItem("currentTask", taskIn);
+    sessionStorage.setItem("current", input);
+    window.location.href='/breath';
 }
 
 function startTimer(duration, display) {
@@ -23,6 +28,7 @@ function startTimer(duration, display) {
 }
 
 window.onload = function () {
+    //var timeChoice = document.getElementById("")
     var fiveMinutes = 60 * timeChoice,
         display = document.querySelector('#time');
     startTimer(fiveMinutes, display);
