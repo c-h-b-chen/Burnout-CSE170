@@ -83,7 +83,10 @@ input[type=text], input[type=password] {
     border: 1px solid #888;
     width: 80%;
   }
-  
+
+  .modal-header {
+    text-align: center;
+  }
   .label {
     margin: 25px;
   }

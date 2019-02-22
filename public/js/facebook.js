@@ -3,8 +3,7 @@ function checkLoginState() {
       statusChangeCallback(response);
     });
   }
-
-
+  
   function statusChangeCallback(response) {
     console.log('Facebook login status changed.');
     console.log(response);
