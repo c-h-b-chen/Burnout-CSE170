@@ -28,15 +28,26 @@
 
 <br>
 
-
 <section class = "container">
     <div class = "text-center">
         <p class = "col-xs-12">
-            <!--Go to enter logs page -->
-            <a class="btn btn-outline-dark" href="/">End</a>
+            <!--Finish burn pop up -->
+            <a class="btn btn-outline-dark" onclick="document.getElementById('id02').style.display='block'">End</a>
         </p>
     </div>
 </section>
+
+<!--Pop Up-->
+<div id="id02" class="modal">
+    <form class="modal-content animate">
+        <div>
+            <span onclick="document.getElementById('id02').style.display='none'" class="close">&times;</span>
+            <h4>Burnt</h4>
+        </div>
+
+        </form>
+    </div>
+
 <!--Footer-->
 <nav class = "navbar fixed-bottom">
     <div>

@@ -30,10 +30,24 @@
 
     <script>
 //Using setTimeout to execute a function after 5 seconds.
-setTimeout(function () {
+//setTimeout(function () {
    //Redirect with JavaScript
-   window.location.href= '/timer';
-}, 5000);
+  // window.location.href= '/timer';
+//}, 5000);
+
+if (window.DeviceOrientationEvent) {
+
+    window.addEventListener("deviceorientation", function(event)
+    {
+        if(event.beta < - 170) {
+            window.location.href= '/timer';
+        }
+    })
+}
+else {
+    alert("Not wokring");
+};
+
 </script>
 
 <br>
