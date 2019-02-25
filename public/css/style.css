@@ -37,9 +37,6 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
   }
 
-.login {
-    padding: 16px;
-}
 .fixed-nav-bottom {
   position: absolute;
   right: 0;
@@ -76,6 +73,18 @@ input[type=text], input[type=password] {
     padding-bottom: 60px;
   }
   
+  /*div.modal-header {
+    padding-bottom: 0px;
+    justify-content: center;
+  }
+
+  div.modal-body p {
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+  }*/
+
+
   /* Modal Content/Box */
   .modal-content {
     background-color: #fefefe;
@@ -84,22 +93,18 @@ input[type=text], input[type=password] {
     width: 80%;
   }
 
-  .modal-header {
-    text-align: center;
-  }
   .label {
     margin: 25px;
   }
 
-  /* The Close Button (x) */
-  .close {
-    position: absolute;
-    right: 10px;
-    color: #000;
-    font-size: 25px;
-    font-weight: bold;
+  a.closed:hover {
+    font-style: italic;
   }
-  
+
+  a:hover{
+    font-style: italic;
+  }
+
   /* Add Zoom Animation */
   .animate {
     -webkit-animation: animatezoom 0.6s;

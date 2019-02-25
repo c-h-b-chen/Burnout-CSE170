@@ -17,7 +17,7 @@
                 sessionStorage.setItem('modState','shown');
                 console.log('show');
             }
-            $('.close').click(function(e) {
+            $('.closed').click(function(e) {
                 $('#myModal').modal('hide');
                 console.log('hidden');
             })
@@ -28,19 +28,24 @@
 </head>
 
 <body>
+    <!--FB-->
+    <div id="fb-root"></div>
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=266615060918340&autoLogAppEvents=1">
+    </script>
+
     <div id="myModal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class= "modal-header">
-                <button type="button" class="close" aria-hidden="true">&times;</button>
-                    <h1>Login</h1>
+            <div class = "modal-header">
+                    <h4>Burnout</h4>
             </div>
             <div class="modal-body">
-                    <p class = "facebooLogin">
-                        Login with your Facebook:
-                        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-				        </fb:login-button>
+                    <b><p>Stay mindful of every task you need to accomplish:</p></b>
+                    <p>
+                        <!--Login with your Facebook:-->
+                        <div class="fb-login-button" scope="public_profile,email" onlogin="checkLoginState();" data-size="medium" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div>
                     </p>
+                    <a href = "#" style="color:gray" class="closed">Later</a>
             </div>
         </div>
     </div>
@@ -94,7 +99,7 @@
                 &nbsp;
                 <a data-toggle="modal" href = "#myModal">
                 <img 
-                src = "/images/facebook-logo-in-circular-button-outlined-social-symbol.svg"
+                src = "/images/user.svg"
                 alt = "help"
                 height = "25px"
                 width = "25px">
