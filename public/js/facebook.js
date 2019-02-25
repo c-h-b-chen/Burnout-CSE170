@@ -14,7 +14,12 @@ function checkLoginState() {
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
           console.log('Successfully logged in with Facebook');
-          $('#myModal').modal('hide');
+          FB.api('/me?fields=name,first_name', getName);
     }
   }
+
+  function getName(response) {
+    $('#name').text(response.name);
+}
+
 
