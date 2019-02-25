@@ -19,7 +19,8 @@ function checkLoginState() {
   }
 
   function getName(response) {
-    $('#name').text(response.name);
+    var myName = response.name; 
+    $('#name').text(myName);
 }
 
 
