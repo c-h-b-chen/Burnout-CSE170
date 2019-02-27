@@ -204,7 +204,7 @@ var count = 0;
 $(document).ready(function() {
 	function fadeText() {
 		$(".breather").fadeOut(500, function () {
-			$(this).html(texts[count]).fadeIn(250);
+			$(this).html(texts[count]).fadeIn(500);
 		});
 		if(count < texts.length) {count++;}
 	}

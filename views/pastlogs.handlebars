@@ -4,38 +4,42 @@
     <!--Title-->
     <title>Account</title>
     <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--BootStrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel = "stylesheet" href = "/css/style.css">
 </head>
 <body>
 
-      <!--Heading-->
-      <section>
-            <div class = "container pt-3">
-                <div>
-                    <p>
-                        <a class="text-left" href = "./">
-                            <img 
-                            src = "/images/left-arrow.svg"
-                            alt = "left arrow"
-                            height = "30px"
-                            width = "30px">
-                        </a>
-                        <h3 class = "text-center"> Past Logs </h3>
-                        <hr>
-                    </p>
-                </div>
-            </div>
-            </section>
+  <!--Heading-->
+  <section>
+    <div class = "container pt-3">
+        <div>
+            <p>
+                <a class="text-left" href = "./">
+                    <img 
+                    src = "/images/left-arrow.svg"
+                    alt = "left arrow"
+                    height = "30px"
+                    width = "30px">
+                </a>
+                <h3 class = "text-center"> Past Logs </h3>
+                <hr>
+            </p>
+        </div>
+    </div>
+</section>
+{{#if logList}}
+{{#each logList}}
+<div class = "logList">
+ <h5 class = "mx-3">{{task}}</h5>
+ <p class = "mx-4">{{description}}</p>
+</div>
+{{/each}}
+{{else}}
+<h5 class = "mx-3">No burnouts yet</h5>
+{{/if}}
 
-            {{#each logList}}
-		<div class = "logList">
-			<h5 class = "mx-3">{{task}}</h5>
-			<p class = "mx-4">{{description}}</p>
-		</div>
-		{{/each}}
 
             <!--{{#each logslist}}
 		<div class = "logslist">
@@ -43,5 +47,5 @@
 			<p>{{description}}</p>
 		</div>
 		{{/each}}-->
-</body>
-</html>
+    </body>
+    </html>
