@@ -200,6 +200,9 @@ function drawLoop( time ) {
 
 var texts = ["Breathe Out", "Breathe In", "Breathe Out", "Breathe In", "Breathe Out","Proceed"]
 var count = 0;
+var newIndex = texts.length;
+
+
 
 $(document).ready(function() {
 	function fadeText() {
