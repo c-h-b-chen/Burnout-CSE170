@@ -13,7 +13,7 @@
 <!--BootStrap-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="js/volume-meter.js"></script>
-<script src= "js/main.js"></script>
+<script src= "js/breathMeter.js"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 <link rel = "stylesheet" href = "/css/style.css">
 </head>
@@ -43,7 +43,7 @@
 	<!--Breathe In/Breathe Out-->
 
 		<div class = "contentbox">
-			<h1 class="breather" onload="fadeText()"></h1>
+			<h1 class="breather"></h1>
 		</div>
 
 
@@ -59,6 +59,12 @@
 		</div>
 	</section>
 
+<script>
+setTimeout(function () {
+   //Redirect with JavaScript
+  window.location.href= '/final';
+}, 20000);
+</script>
 	<!--Footer-->
 	<nav class = "navbar fixed-bottom">
 		<div>
