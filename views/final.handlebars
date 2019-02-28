@@ -9,20 +9,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel = "stylesheet" href = "/css/style.css">
     <link rel = "stylesheet" href = "/css/Fire.css">
-    
 </head>
 <body>
 
-    <section class = "container">
-                <!--Back to breathing-->
-                <a class = "" href = "/breath">
-                    <img 
-                    src = "/images/left-arrow.svg"
-                    alt = "left arrow"
-                    height = "40px"
-                    width = "40px">
-                </a>
-    </section>
+    <!-- Back Button -->
+    {{> backbutton}}
+
     <!--Title-->
         <div class = "text-center" style="margin: 2rem;">
             <h2>It's Lit!</h2>
@@ -89,5 +81,6 @@ else {
 };
 
 </script>
+<script src = "/js/back.js"></script>
 </body>
 </html>

@@ -10,34 +10,26 @@
     <link rel = "stylesheet" href = "/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="js/setVariables.js"></script>
+    <script src = "/js/back.js"></script>
 </head>
 <body>
+
+     <!-- Back Button -->
+    {{> backbutton}}
+  
+  
   <!--User Input-->
   <section class = "pt-3">
-
-    <!--Back to index-->
-    <a class = "container" href = "/">
-        <img 
-        src = "/images/left-arrow.svg"
-        alt = "left arrow"
-        height = "40px"
-        width = "40px">
-    </a>
-
     <div class = "contentbox">
         <form  role="form" method="get" action="/addLog">
             <h2>What do you need to get done today?</h2>
             <div class="form-group">
 
               <input type="text" class="form-control" id="inputLog" placeholder="I need to..." name="inputLog">
-          </div>
-          
+          </div>   
         <input onclick="document.getElementById('id01').style.display='block'" type="submit" id="submitBtn" class="btn btn-outline-dark" value="Submit"></input>
     </form>
-    
 </div>
-
-
 </section>
 <br>
 
