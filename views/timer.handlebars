@@ -65,11 +65,19 @@
 </div>
 
 <script>
+    
+    document.getElementById("restartButton").onclick = function () {
+        location.href = "/breath";
+    };
+    document.getElementById("endButton").onclick = function () {
+        location.href = "/";
+    };
+
     if (window.DeviceOrientationEvent) {
         window.addEventListener("deviceorientation", function(event)
         {
             if(event.beta < 20 || event.beta > -20) {
-                document.getElementById('id02').style.display='none';
+                document.getElementById('id02');
             }
         })
     }
@@ -77,12 +85,6 @@
         alert("Your device does not support orientation stuff");
     };
 
-    document.getElementById("restartButton").onclick = function () {
-        location.href = "/breath";
-    };
-    document.getElementById("endButton").onclick = function () {
-        location.href = "/";
-    };
 </script>
 
 
