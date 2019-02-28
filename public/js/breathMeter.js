@@ -105,7 +105,7 @@ function drawLoop( time ) {
 //Breath
 
 
-var texts = ["Breathe In", "Breathe Out", "Breathe In", "Breathe Out"];
+var texts = ["Take a Deep Breath in", "Slowly Blow Out", "Take a Deep Breath in", "Slowly Blow Out"];
 var count = 0;
 
 
