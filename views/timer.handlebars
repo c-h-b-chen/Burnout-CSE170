@@ -73,13 +73,18 @@
         location.href = "/";
     };
 
+    
+    var trigger = 200;
+
     if (window.DeviceOrientationEvent) {
-        window.addEventListener("deviceorientation", function(event)
+        window.addEventListener("deviceorientation", function updateTrigger(event)
         {
-            if(event.beta < 20 || event.beta > -20) {
+            trigger = event.beta;
+        })
+        if(trigger < 20 || trigger > -20) {
+                window.removeEventListener("deviceorientation", updateTrigger, true)
                 document.getElementById('id02');
             }
-        })
     }
     else {
         alert("Your device does not support orientation stuff");
