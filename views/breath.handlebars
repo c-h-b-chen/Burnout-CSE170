@@ -39,16 +39,11 @@
     </script>
 
 	<div class = "contentbox">
-		<canvas id="meter" width="300" height="200"></canvas>
+		<canvas id="meter" width="300" height="125"></canvas>
 	</div>
-	<!--Breathe In/Breathe Out-->
 
-		<div class = "contentbox">
-			<h1 class="breather"></h1>
-		</div>
-    	
-    	<!--Fire-->
-    	<section style="background-color:white" class = "jumbotron">
+	<!--Fire-->
+    	<section style="background-color:white">
             <div class = "container">
                 <div class = "text-center">
                     <p>
@@ -63,24 +58,30 @@
             </div>
         </section>
 
+	<!--Breathe In/Breathe Out-->
+
+		<div class = "contentbox">
+			<h1 class="breather"></h1>
+		</div>
+    	
+
 	<!--Navigation Buttons-->
 	<section class = "container">
-		<div class = "fixed-nav-bottom">
-			<p class = "col-xs-12">
+		<div style="position: absolute;text-align: center;right: 0;left: 0;">
 				<!--Go to page to turn phone down-->
 				<a class="btn btn-outline-dark" href = "/final">
 					Skip
 				</a>
-			</p>
 		</div>
 	</section>
 
 <script>
-setTimeout(function () {
-   //Redirect with JavaScript
-  window.location.href= '/final';
-}, 20000);
+// setTimeout(function () {
+//    //Redirect with JavaScript
+//   window.location.href= '/final';
+// }, 20000);
 </script>
+
 	<!--Footer-->
 	<nav class = "navbar fixed-bottom">
 		<div>

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel = "stylesheet" href = "/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="js/setTimer.js"></script>
+    <script src="js/setVariables.js"></script>
 </head>
 <body>
   <!--User Input-->
@@ -51,9 +51,9 @@
         <div class="container">
             <form role="form" method="get" action="/addTime">
                 <label class = "label" for="uname">
-                    <p>How long do you want to spend on this task?</p>
+                    <p>How many minutes do you want to spend on this task?</p>
                 </label>
-                <div class="container">
+                <div class="container" style="margin-bottom: 2rem">
                 <select name="inputTime" id="inputTime" style="bottom: auto;padding: 10px;background: whitesmoke;margin: 10px 20px;border-radius: .25rem;">
                     <option value="5">5</option>
                     <option value="10">10</option>
@@ -68,7 +68,6 @@
                     <option value="55">55</option>
                     <option value="60">60</option>
                 </select>
-            </div>
                 <span style = "font-size: 15px;" onclick="setTime()" class = "btn btn-outline-dark" href = "#">Submit</span>
             </div>
 
