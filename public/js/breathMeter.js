@@ -22,7 +22,7 @@ var audioContext = null;
 var meter = null;
 var canvasContext = null;
 var WIDTH=300;
-var HEIGHT=500;
+var HEIGHT=200;
 var rafID = null;
 
 window.onload = function() {
@@ -74,17 +74,17 @@ function gotStream(stream) {
     // Create an AudioNode from the stream.
     mediaStreamSource = audioContext.createMediaStreamSource(stream);
 
-    // Create a new volume meter and connect it.
+    //Create a new volume meter and connect it.
     meter = createAudioMeter(audioContext);
     mediaStreamSource.connect(meter);
-
-    // kick off the visual updating
+    //kick off the visual updating
     drawLoop();
 }
 
 
 function drawLoop( time ) {
     // clear the background
+
     canvasContext.clearRect(0,0,WIDTH,HEIGHT);
 
     // check if we're currently clipping
@@ -94,8 +94,10 @@ function drawLoop( time ) {
     	canvasContext.fillStyle = "yellow";
 
     // draw a bar based on the current volume
-    canvasContext.fillRect(0, 0, WIDTH, meter.volume*HEIGHT*4.4);
-
+    canvasContext.fillRect(0, 0, WIDTH/4, meter.volume*HEIGHT*2.4 );
+    canvasContext.fillRect(WIDTH/4, 0, WIDTH/4, meter.volume*HEIGHT*4.4 );
+    canvasContext.fillRect(WIDTH/2, 0, WIDTH/4, meter.volume*HEIGHT*3.4 );
+    canvasContext.fillRect(WIDTH-WIDTH/4, 0, WIDTH/4, meter.volume*HEIGHT*1.4 );
     // set up the next visual callback
     rafID = window.requestAnimationFrame( drawLoop );
 }
