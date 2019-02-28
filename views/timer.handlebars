@@ -66,10 +66,10 @@
 
 <script>
     if (window.DeviceOrientationEvent) {
-
         window.addEventListener("deviceorientation", function(event)
         {
-            if(event.beta > - 120) {
+            if(event.beta < 20 || event.beta > -20) {
+                alert("Too early");
                 document.getElementById('id02').style.display='none';
             }
         })
