@@ -7,52 +7,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--BootStrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel = "stylesheet" href = "/css/Fire.css">
     <link rel = "stylesheet" href = "/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
+    <script src = "/js/back.js"></script>
 </head>
 
-<body onload="init()">
+<body onload="init()" class = "mag">
+      <!-- Back Button -->
+    {{> backbutton}}
+
     <script>
         $(document).ready(function() {
     // document is loaded and DOM is ready
-    alert("Focus on keeping the circle in the middle of the screen. Advance when you feel ready.");
+    alert("Focus on keeping the circle in the middle of the screen for as long as possible");
 });
     </script>
 
     <!--magnifying glass image-->
-    <img src="/images/magnifying-glass.png">
+    <!--img src="/images/magnifying-glass.png"-->
 
-    <section class = "container pt-3">
-                <!--Back to enter log-->
-                <a class = "" href = "/enterlog">
-                    <img 
-                    src = "/images/left-arrow.svg"
-                    alt = "left arrow"
-                    height = "40px"
-                    width = "40px">
-                </a>
-    </section>
+            <div class = "container" style="margin-top:40%;">
+                <div class = "text-center">
+                    <p>
+                        <div class="fire">
+                           <div class="flames">
+                              <div class="flame"></div>
+                           </div>
+                           <div class="logs"></div>
+                        </div> 
+                    </p>
+                </div>
+            </div>
+
+
     <div class="magPage"></div>
     <div id="ball"></div>
-    <div class="container" 
-    <!--Navigation Buttons-->
+    
+                <!--Navigation Buttons-->
     <section class = "container">
-        <div class = "fixed-nav-bottom">
-            <p class = "col-xs-12">
-
-                <!--Go to breathing-->
-                <a href = "/breath">
-                    <img 
-                    src = "/images/right-arrow.svg"
-                    alt = "right arrow"
-                    height = "40px"
-                    width = "40px">
+        <div style="position: absolute;text-align: center;right: 0;left: 0;bottom: 20%;">
+                <!--Go to page to turn phone down-->
+                <a class="btn btn-outline-dark" href = "/final">
+                    Skip
                 </a>
-            </p>
         </div>
     </section>
-</div>
+
+<script>
+setTimeout(function () {
+   //Redirect with JavaScript
+  window.location.href= '/final';
+}, 20000);
+</script>
 
 <!--Footer-->
     <nav class = "navbar fixed-bottom">
