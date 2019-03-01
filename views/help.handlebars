@@ -14,30 +14,33 @@
       <!--Heading-->
       <section>
             <div class = "container pt-3">
-                <div>
-                    <p>
-                        <a class="text-left" href = "./">
-                            <img 
-                            src = "/images/left-arrow.svg"
-                            alt = "left arrow"
-                            height = "30px"
-                            width = "30px">
-                        </a>
-                        <h3 class = "text-center"> Help </h3>
+                        <!-- Back Button -->
+                        {{> backbutton}}
+                        <h3 class = "text-center"> About Burnout </h3>
                         <hr>
-                    </p>
-                </div>
             </div>
         </section>
         <section>
             <div class = "container">
                 <div>
-                    <p>
-                        <h5 class = "text-left"> Timer Not Working </h5>
-                        <p class = "pl-3" style="text-align: left;">Under construction.</p>
+                    <h5> Our Goal</h5>
+                    <p>Burnout's goal is to get you off of your phone and fully immersed in the task you need to accomplish. </p>
+                     <h5> Overview</h5>
+                     <p>
+                         Burnout consists of 4 easy steps:
+                         <ol>
+                             <li>Enter the task you need to accomplish</li>
+                             <li>Choose how many minutes you want to spend on the task</li>
+                             <li>Take two deeps breaths to prepare you to focus</li>
+                             <li>Flip your phone down and get to work!</li>
+                         </ol>
                     </p>
+                    <h5>Staying Off Your Phone</h5>
+                    <p>Burnout encourages you to stay off your phone by detecting that your phone is faced down in order to start the timer. If the phone is flipped too early, your fire will go out, but you will have the option to try again.</p>
                 </div>
             </div>
         </section>
+
+    <script src = "/js/back.js"></script>
 </body>
 </html>
