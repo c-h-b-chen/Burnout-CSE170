@@ -18,7 +18,7 @@
         <div class = "text-center">
             <div><span id="time" style="font-size: 4rem;"></span></div>
             <div id="selectedTime"></div>
-            <script>
+            <!-- <script>
                 var sound = new Howl({
                 src: "https://actions.google.com/sounds/v1/alarms/bugle_tune.ogg",
                 onplayerror: function() {
@@ -33,7 +33,7 @@
                 var thisTask = sessionStorage.getItem("currentTask");
                 console.log("test: "+thisTimer+thisTask);
                 document.getElementById("selectedTime").innerHTML = thisTask;
-            </script>
+            </script> -->
         </div>
     </section>
 
@@ -74,21 +74,21 @@
         };
 
         
-        var trigger = 200;
+        // var trigger = 200;
 
-        if (window.DeviceOrientationEvent) {
-            window.addEventListener("deviceorientation", function updateTrigger(event)
-            {
-                trigger = event.beta;
-            })
-            if(trigger < 20 || trigger > -20) {
-                    window.removeEventListener("deviceorientation", updateTrigger, true)
-                    document.getElementById('id02');
-                }
-        }
-        else {
-            alert("Your device does not support orientation stuff");
-        };
+        // if (window.DeviceOrientationEvent) {
+        //     window.addEventListener("deviceorientation", function updateTrigger(event)
+        //     {
+        //         trigger = event.beta;
+        //     })
+        //     if(trigger < 20 || trigger > -20) {
+        //             window.removeEventListener("deviceorientation", updateTrigger, true)
+        //             document.getElementById('id02');
+        //         }
+        // }
+        // else {
+        //     alert("Your device does not support orientation stuff");
+        // };
 
     </script>
     </body>
