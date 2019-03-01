@@ -1,85 +1,75 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Breathe</title>
-</head>
-<body>
+	<head>
+		<title>Breathe</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--BootStrap-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="js/volume-meter.js"></script>
+		<script src= "js/breathMeter.js"></script>
+		<script src = "/js/back.js"></script>
+		<link rel = "stylesheet" href = "/css/Fire.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+		<link rel = "stylesheet" href = "/css/style.css">
+	</head>
 
-</p>
-<!--Title-->
-<title></title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--BootStrap-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="js/volume-meter.js"></script>
-<script src= "js/breathMeter.js"></script>
-<script src = "/js/back.js"></script>
-<link rel = "stylesheet" href = "/css/Fire.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-<link rel = "stylesheet" href = "/css/style.css">
-</head>
+	<body>
+		<!-- Back Button -->
+		{{> backbutton}}
 
-<body>
-    <!-- Back Button -->
-    {{> backbutton}}
+		<div class = "contentbox">
+			<canvas id="meter" width="300" height="125"></canvas>
+		</div>
 
- <script>
-        $(document).ready(function() {
-    // document is loaded and DOM is ready
-    alert("Follow the on screen instructions to kindle the flame!");
-});
-    </script>
+		<!--Fire-->
+		<section style="background-color:white">
+			<div class = "container">
+				<div class = "text-center">
+					<p>
+						<div class="fire">
+							<div class="flames">
+								<div class="flame"></div>
+							</div>
+							<div class="logs"></div>
+						</div> 
+					</p>
+				</div>
+			</div>
+		</section>
 
-	<div class = "contentbox">
-		<canvas id="meter" width="300" height="125"></canvas>
-	</div>
-
-	<!--Fire-->
-    	<section style="background-color:white">
-            <div class = "container">
-                <div class = "text-center">
-                    <p>
-                        <div class="fire">
-                           <div class="flames">
-                              <div class="flame"></div>
-                           </div>
-                           <div class="logs"></div>
-                        </div> 
-                    </p>
-                </div>
-            </div>
-        </section>
-
-	<!--Breathe In/Breathe Out-->
-
+		<!--Breathe In/Breathe Out-->
 		<div class = "contentbox">
 			<h1 class="breather"></h1>
 		</div>
-    	
 
-	<!--Navigation Buttons-->
-	<section class = "container">
-		<div style="position: absolute;text-align: center;right: 0;left: 0;">
+		<!-- Skip Button -->
+		<section class = "container">
+			<div style="position: absolute;text-align: center;right: 0;left: 0;">
 				<!--Go to page to turn phone down-->
-				<a class="btn btn-outline-dark" href = "/final">
-					Skip
-				</a>
-		</div>
-	</section>
+				<a class="btn btn-outline-dark" href = "/final">Skip</a>
+			</div>
+		</section>
 
-<script>
-// setTimeout(function () {
-//    //Redirect with JavaScript
-//   window.location.href= '/final';
-// }, 20000);
-</script>
+		<!--Footer-->
+		<nav class = "navbar fixed-bottom">
+			<div>
+				<p><b>2/3</b></p>
+			</div>
+		</nav>
 
-	<!--Footer-->
-	<nav class = "navbar fixed-bottom">
-		<div>
-			<p><b>2/3</b></p>
-		</div>
-	</nav>
-</body>
+		<!--<script>
+		 setTimeout(function () {
+		    //Redirect with JavaScript
+		   window.location.href= '/final';
+		 }, 20000);
+		</script>-->
+		
+		<script>
+			$(document).ready(function() {
+			// document is loaded and DOM is ready
+			alert("Follow the on screen instructions to kindle the flame!");
+			});
+		</script>
+	</body>
 </html>
