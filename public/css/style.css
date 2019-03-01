@@ -7,6 +7,15 @@
   background-position-x: 10%;
 }
 
+#fire {
+  padding-bottom: 0px;
+}
+
+#later {
+  color: gray;
+  font-size: 19px;
+}
+
 h1 {
     font-size: 50px;
 }
@@ -78,6 +87,10 @@ input[type=text], input[type=password] {
     padding-bottom: 60px;
   }
   
+  .close {
+    padding-right: 10px;
+  }
+
   /*div.modal-header {
     padding-bottom: 0px;
     justify-content: center;
@@ -96,10 +109,11 @@ input[type=text], input[type=password] {
     margin: 5% auto 20% auto;
     border: 1px solid #888;
     width: 80%;
+    text-align: center;
   }
 
   .label {
-    margin: 25px;
+  
   }
 
   a.closed:hover {

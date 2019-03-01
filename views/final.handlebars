@@ -1,86 +1,104 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <!--Title-->
-    <title>Final</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--BootStrap-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel = "stylesheet" href = "/css/style.css">
-    <link rel = "stylesheet" href = "/css/Fire.css">
-</head>
-<body>
+    <head>
+        <!--Title-->
+        <title>Final</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--BootStrap-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel = "stylesheet" href = "/css/style.css">
+        <link rel = "stylesheet" href = "/css/Fire.css">
+    </head>
+    <body>
+        <br>
+        <!-- Back Button -->
+        {{> backbutton}}
 
-    <!-- Back Button -->
-    {{> backbutton}}
-
-    <!--Title-->
+        <!--Title-->
         <div class = "text-center" style="margin: 2rem;">
             <h2>It's Lit!</h2>
         </div>
-            <section style="text-align: center;margin: 2rem;padding-bottom: 1rem">
-                <h6>Flip your phone over</h6>
-                <h6>to protect the flame!</h6>
-            </section>
-            <br>
+            
+        <section style="text-align: center;margin: 2rem;padding-bottom: 1rem">
+            <h6>Flip your phone over</h6>
+            <h6>to protect the flame!</h6>
+        </section>
+        <br>
 
-            <!--Fire-->
+        <!--Fire-->
         <section style="background-color:white">
             <div class = "container">
                 <div class = "text-center">
                     <p>
                         <div class="fire">
-                           <div class="flames">
-                              <div class="flame"></div>
-                              <div class="flame"></div>
-                              <div class="flame"></div>
-                              <div class="flame"></div>
-                           </div>
-                           <div class="logs"></div>
+                        <div class="flames">
+                            <div class="flame"></div>
+                            <div class="flame"></div>
+                            <div class="flame"></div>
+                            <div class="flame"></div>
+                        </div>
+                        <div class="logs"></div>
                         </div> 
                     </p>
                 </div>
             </div>
         </section>
-            
-            <section style="margin: 1rem;text-align: center;">
-                <h7>Keep the fire going by </h7>
-                <h7>keeping your phone faced down</h7>
-                <h7>until the fire burns out</h7>
-            </section>
-            <div id="countdown"></div>
-        </div>
+                
+        <section style="margin: 1rem;text-align: center;">
+            <h7>Keep the fire going by </h7>
+            <h7>keeping your phone faced down</h7>
+            <h7>
+                until the fire burns out
+                &nbsp;
+                <a data-container="body" data-toggle="popover" data-placement="bottom" data-content = "If you flip your phone over to early, the fire will go out!">
+					<img 
+					src = "/images/information.svg"
+					alt = "help"
+					height = "15px"
+					width = "15px">
+                </a>
+            </h7>
+        </section>
 
-<!--Footer-->
-<nav class = "navbar fixed-bottom">
-    <div>
-        <p><b>3/3</b></p>
-    </div>
-</nav>
+        <div id="countdown"></div>
 
-<!-- JavaScript -->
-<script>
-//Using setTimeout to execute a function after 5 seconds.
-//setTimeout(function () {
-   //Redirect with JavaScript
-  // window.location.href= '/timer';
-//}, 5000);
+        <!--Footer-->
+        <nav class = "navbar fixed-bottom">
+            <div>
+                <p><b>3/3</b></p>
+            </div>
+        </nav>
 
-if (window.DeviceOrientationEvent) {
+        <!-- JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script>
+        //Using setTimeout to execute a function after 5 seconds.
+        //setTimeout(function () {
+        //Redirect with JavaScript
+        // window.location.href= '/timer';
+        //}, 5000);
 
-    window.addEventListener("deviceorientation", function(event)
-    {
-        if(event.beta < - 170 || event.beta > 170 ) {
-            window.location.href= '/timer';
+        if (window.DeviceOrientationEvent) {
+
+            window.addEventListener("deviceorientation", function(event)
+            {
+                if(event.beta < - 170 || event.beta > 170 ) {
+                    window.location.href= '/timer';
+                }
+            })
         }
-    })
-}
-else {
-    alert("Your device does not support orientation stuff");
-};
-
-</script>
-<script src = "/js/back.js"></script>
-</body>
+        else {
+            alert("Your device does not support orientation stuff");
+        };
+        </script>
+        <script src = "/js/back.js"></script>
+        <script>
+           $(function () {
+                $('[data-toggle="popover"]').popover()
+            })
+        </script>
+    </body>
 </html>

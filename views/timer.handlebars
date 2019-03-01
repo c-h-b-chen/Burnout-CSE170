@@ -1,104 +1,95 @@
 <!DOCTYPE html>
 <html>
-<head>
+    <head>
+        <!--Title-->
+        <title>Timer</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--BootStrap-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel = "stylesheet" href = "/css/style.css">
+        <script src="js/setTimer.js"></script>
+        <script src="js/howler.js"></script>
+    </head>
+    <body>
+
     <!--Title-->
-    <title>Timer</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--BootStrap-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel = "stylesheet" href = "/css/style.css">
-    <script src="js/setTimer.js"></script>
-    <script src="js/howler.js"></script>
-</head>
-<body>
+    <section class = "jumbotron">
+        <div class = "text-center">
+            <div><span id="time" style="font-size: 4rem;"></span></div>
+            <div id="selectedTime"></div>
+            <script>
+                var sound = new Howl({
+                src: "https://actions.google.com/sounds/v1/alarms/bugle_tune.ogg",
+                onplayerror: function() {
+                    sound.once('unlock', function() {
+                    sound.play();
+                });
+                }
+            });
 
-  <!--Title-->
-  <section class = "jumbotron">
-    <div class = "text-center">
-        <div><span id="time" style="font-size: 4rem;"></span></div>
-        <div id="selectedTime"></div>
-        <script>
-            var sound = new Howl({
-              src: "https://actions.google.com/sounds/v1/alarms/bugle_tune.ogg",
-              onplayerror: function() {
-                sound.once('unlock', function() {
-                  sound.play();
-              });
-            }
-        });
-
-            sound.play();
-            var thisTimer = sessionStorage.getItem("current");
-            var thisTask = sessionStorage.getItem("currentTask");
-            console.log("test: "+thisTimer+thisTask);
-            document.getElementById("selectedTime").innerHTML = thisTask;
-        </script>
-    </div>
-</section>
-
-<br>
-
-<section class = "container">
-    <div class = "text-center">
-        <p class = "col-xs-12">
-            <!--Finish burn pop up -->
-            <a class="btn btn-outline-dark" onclick="document.getElementById('id02').style.display='block'">End</a>
-        </p>
-    </div>
-</section>
-
-<!--Pop Up-->
-<div id="id02" class="modal">
-    <form class="modal-content animate">
-        <div>
-            <span onclick="document.getElementById('id02').style.display='none'" class="close">&times;</span>
-            <h2 style="text-align: center;">Snuffed!</h2>
-            <div class="modal-body" style="text-align: center;">
-                <p>You checked your phone too early!</p>
-                <button style="margin:5px" type="button" onclick="document.getElementById('id02').style.display='none'" class="btn btn-outline-dark" data-dismiss="modal">Continue</button>
-                <button style="margin:5px" type="button" class="btn btn-outline-dark" id="restartButton">Restart</button>
-                <button style="margin:5px" type="button" class="btn btn-outline-dark" id="endButton">End Activity</button>
-            </div>
+                sound.play();
+                var thisTimer = sessionStorage.getItem("current");
+                var thisTask = sessionStorage.getItem("currentTask");
+                console.log("test: "+thisTimer+thisTask);
+                document.getElementById("selectedTime").innerHTML = thisTask;
+            </script>
         </div>
-    </form>
-</div>
+    </section>
 
-<script>
-    
-    document.getElementById("restartButton").onclick = function () {
-        location.href = "/breath";
-    };
-    document.getElementById("endButton").onclick = function () {
-        location.href = "/";
-    };
+    <br>
 
-    
-    var trigger = 200;
+    <section class = "container">
+        <div class = "text-center">
+            <p class = "col-xs-12">
+                <!--Finish burn pop up -->
+                <a class="btn btn-outline-dark" onclick="document.getElementById('id02').style.display='block'">End</a>
+            </p>
+        </div>
+    </section>
 
-    if (window.DeviceOrientationEvent) {
-        window.addEventListener("deviceorientation", function updateTrigger(event)
-        {
-            trigger = event.beta;
-        })
-        if(trigger < 20 || trigger > -20) {
-                window.removeEventListener("deviceorientation", updateTrigger, true)
-                document.getElementById('id02');
-            }
-    }
-    else {
-        alert("Your device does not support orientation stuff");
-    };
-
-</script>
-
-
-
-<!--Footer-->
-<nav class = "navbar fixed-bottom">
-    <div>
-        <p><b>5/5</b></p>
+    <!--Pop Up-->
+    <div id="id02" class="modal">
+        <form class="modal-content animate">
+            <div>
+                <span onclick="document.getElementById('id02').style.display='none'" class="close">&times;</span>
+                <h2 style="text-align: center;">Snuffed!</h2>
+                <div class="modal-body" style="text-align: center;">
+                    <p>You checked your phone too early!</p>
+                    <button style="margin:5px" type="button" onclick="document.getElementById('id02').style.display='none'" class="btn btn-outline-dark" data-dismiss="modal">Continue</button>
+                    <button style="margin:5px" type="button" class="btn btn-outline-dark" id="restartButton">Restart</button>
+                    <button style="margin:5px" type="button" class="btn btn-outline-dark" id="endButton">End Activity</button>
+                </div>
+            </div>
+        </form>
     </div>
-</nav>
-</body>
+
+    <script>
+        
+        document.getElementById("restartButton").onclick = function () {
+            location.href = "/breath";
+        };
+        document.getElementById("endButton").onclick = function () {
+            location.href = "/";
+        };
+
+        
+        var trigger = 200;
+
+        if (window.DeviceOrientationEvent) {
+            window.addEventListener("deviceorientation", function updateTrigger(event)
+            {
+                trigger = event.beta;
+            })
+            if(trigger < 20 || trigger > -20) {
+                    window.removeEventListener("deviceorientation", updateTrigger, true)
+                    document.getElementById('id02');
+                }
+        }
+        else {
+            alert("Your device does not support orientation stuff");
+        };
+
+    </script>
+    </body>
 </html>

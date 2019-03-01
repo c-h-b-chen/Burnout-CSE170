@@ -1,85 +1,99 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Breathe</title>
-</head>
-<body>
+	<head>
+		<title>Breathe</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--BootStrap-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+		<link rel = "stylesheet" href = "/css/style.css">
+		<link rel = "stylesheet" href = "/css/Fire.css">
+	</head>
 
-</p>
-<!--Title-->
-<title></title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--BootStrap-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="js/volume-meter.js"></script>
-<script src= "js/breathMeter.js"></script>
-<script src = "/js/back.js"></script>
-<link rel = "stylesheet" href = "/css/Fire.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-<link rel = "stylesheet" href = "/css/style.css">
-</head>
+	<body>
+		<br>
+		<!-- Back Button -->
+		{{> backbutton}}
 
-<body>
-    <!-- Back Button -->
-    {{> backbutton}}
+		<div class = "contentbox">
+			<canvas id="meter" width="300" height="125"></canvas>
+		</div>
 
- <script>
-        $(document).ready(function() {
-    // document is loaded and DOM is ready
-    alert("Follow the on screen instructions to kindle the flame!");
-});
-    </script>
+		<!--Fire-->
+		<section style="background-color:white">
+			<div class = "container">
+				<div class = "text-center">
+					<p>
+						<div class="fire">
+							<div class="flames">
+								<div class="flame"></div>
+							</div>
+							<div class="logs"></div>
+						</div> 
+					</p>
+				</div>
+			</div>
+		</section>
 
-	<div class = "contentbox">
-		<canvas id="meter" width="300" height="125"></canvas>
-	</div>
-
-	<!--Fire-->
-    	<section style="background-color:white">
-            <div class = "container">
-                <div class = "text-center">
-                    <p>
-                        <div class="fire">
-                           <div class="flames">
-                              <div class="flame"></div>
-                           </div>
-                           <div class="logs"></div>
-                        </div> 
-                    </p>
-                </div>
-            </div>
-        </section>
-
-	<!--Breathe In/Breathe Out-->
-
+		<!--Breathe In/Breathe Out-->
 		<div class = "contentbox">
 			<h1 class="breather"></h1>
 		</div>
-    	
 
-	<!--Navigation Buttons-->
-	<section class = "container">
-		<div style="position: absolute;text-align: center;right: 0;left: 0;">
+		<!-- Skip Button -->
+		<section class = "container">
+			<div style="position: absolute;text-align: center;right: 0;left: 0;">
 				<!--Go to page to turn phone down-->
-				<a class="btn btn-outline-dark" href = "/final">
-					Skip
-				</a>
-		</div>
-	</section>
+				<a class="btn btn-outline-dark" href = "/final">Skip</a>
+				 &nbsp;
+                            <a data-container="body" data-toggle="popover" data-placement="bottom" data-content = "Before starting on your task, focus on your breathing to truly become mindful of what you're doing.">
+                        <img 
+                        src = "/images/information.svg"
+                        alt = "help"
+                        height = "15px"
+                        width = "15px">
+                </a>
+			</div>
+		</section>
 
+<<<<<<< HEAD
 <script>
 setTimeout(function () {
    //Redirect with JavaScript
   window.location.href= '/final';
 }, 20000);
 </script>
+=======
+		<!--Footer-->
+		<nav class = "navbar fixed-bottom">
+			<div>
+				<p><b>2/3</b></p>
+			</div>
+		</nav>
+>>>>>>> 46098026928262bdfa245191f2cc47f01e812384
 
-	<!--Footer-->
-	<nav class = "navbar fixed-bottom">
-		<div>
-			<p><b>2/3</b></p>
-		</div>
-	</nav>
-</body>
+		<!--<script>
+		 setTimeout(function () {
+		    //Redirect with JavaScript
+		   window.location.href= '/final';
+		 }, 20000);
+		</script>-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script src="js/volume-meter.js"></script>
+		<script src= "js/breathMeter.js"></script>
+		<script src = "/js/back.js"></script>
+		<script>
+			$(document).ready(function() {
+			// document is loaded and DOM is ready
+			alert("Follow the on screen instructions to kindle the flame!");
+			});
+		</script>
+		<script>
+           $(function () {
+                $('[data-toggle="popover"]').popover()
+            })
+        </script>
+	</body>
 </html>

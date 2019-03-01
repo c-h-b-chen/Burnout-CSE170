@@ -7,27 +7,6 @@
     <link rel = "stylesheet" href = "/css/style.css">
     <link rel = "stylesheet" href = "/css/Fire.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-     <!-- JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script type = "text/javascript">
-        $(document).ready(function() {
-            if(sessionStorage.getItem('modState') !== 'shown') {
-                $('#myModal').modal('show');
-                sessionStorage.setItem('modState','shown');
-                console.log('show');
-            }
-            $('.closed').click(function(e) {
-                $('#myModal').modal('hide');
-                console.log('hidden');
-            })
-        });
-    </script>
-     {{> facebook}}
-    <script src="/js/facebook.js"></script>
-    
-
 </head>
 
 <body>
@@ -48,7 +27,7 @@
                         <!--Login with your Facebook:-->
                         <div class="fb-login-button" scope="public_profile,email" onlogin="checkLoginState();" data-size="medium" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div>
                     </p>
-                    <a href = "#" style="color:gray" class="closed">Later</a>
+                    <a href = "#" id = "later">Later</a>
             </div>
         </div>
     </div>
@@ -64,8 +43,11 @@
                 </div>
             </div>
         </section>
+        <br>
+        <br>
+
         <!--Fire-->
-        <section style="background-color:white" class = "jumbotron">
+        <section id = "fire" style="background-color:white" class = "jumbotron">
             <div class = "container">
                 <div class = "text-center">
                     <p>
@@ -120,5 +102,25 @@
             </a>
         </div>
     </nav>
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type = "text/javascript">
+        $(document).ready(function() {
+            if(sessionStorage.getItem('modState') !== 'shown') {
+                $('#myModal').modal('show');
+                sessionStorage.setItem('modState','shown');
+                console.log('show');
+            }
+            $('.closed').click(function(e) {
+                $('#myModal').modal('hide');
+                console.log('hidden');
+            })
+        });
+    </script>
+     {{> facebook}}
+    <script src="/js/facebook.js"></script>
 </body>
 </html>
