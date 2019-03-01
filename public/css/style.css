@@ -33,6 +33,7 @@ h1 {
 	height:300px;
 	border-radius: 50%;
 	background: yellow;
+  opacity: 0.5;
 }
 
 /* Style login */
