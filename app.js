@@ -17,6 +17,7 @@ var magnifyingglass = require('./routes/magnifyingglass');
 var final = require('./routes/final');
 var breath = require('./routes/breath');
 var addLog = require('./routes/addLog');
+var breathAlt = require('./routes/breathAlt');
 // Example route
 // var user = require('./routes/user');
 
@@ -51,6 +52,7 @@ app.get('/magnifyingglass', magnifyingglass.view);
 app.get('/final', final.view);
 app.get('/breath', breath.view);
 app.get('/addLog', addLog.addLog);
+app.get('/breathAlt', breathAlt.view);
 // Example route
 // app.get('/users', user.list);
 

@@ -1,6 +1,11 @@
 .jumbotron {
     background-color: white;
 }
+.mag {
+  background-image: url("/images/magnifying-glass.png");
+  background-repeat: no-repeat;
+  background-position-x: 10%;
+}
 
 h1 {
     font-size: 50px;
