@@ -119,11 +119,9 @@
             if(sessionStorage.getItem('modState') !== 'shown') {
                 $('#myModal').modal('show');
                 sessionStorage.setItem('modState','shown');
-                console.log('show');
             }
             $('.closed').click(function(e) {
                 $('#myModal').modal('hide');
-                console.log('hidden');
             })
         });
     </script>
