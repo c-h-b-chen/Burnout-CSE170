@@ -85,7 +85,7 @@
 
             window.addEventListener("deviceorientation", function(event)
             {
-                if(event.beta < - 170 || event.beta > 170 ) {
+                if((event.beta < - 120) && (event.beta > - 170) || (event.beta > 120) && (event.beta < 170 )) {
                     window.location.href= '/timer';
                 }
             })
