@@ -15,7 +15,7 @@ function checkLoginState() {
     if (response.status === 'connected') {
       localStorage.setItem(response.status, 'connected');
 
-      if (localStorage.getItem(response.data) === 'connected') {
+      if (localStorage.getItem(response.status) === 'connected') {
         // Logged into your app and Facebook.
         $('#myModal').modal('hide');
         console.log('Successfully logged in with Facebook');
