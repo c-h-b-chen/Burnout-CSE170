@@ -1,3 +1,8 @@
+div.contentbox {
+  background-color: transparent;
+  font-family: 'Quicksand', sans-serif;
+  color: #254a85;
+}
 html, body {
   min-height: 100%;
 }
@@ -24,7 +29,7 @@ body.page{
     color: #254a85;
 }
 
-a.btn {
+a.btn, input.btn {
     font-size: 25px;
     color: white;
     border: 10px white;
