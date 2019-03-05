@@ -1,6 +1,4 @@
-.jumbotron {
-    background-color: white;
-}
+
 .mag {
   background-image: url("/images/magnifying-glass.png");
   background-repeat: no-repeat;
@@ -9,6 +7,7 @@
 
 #fire {
   padding-bottom: 0px;
+  background-color: rgb(108, 181, 189);
 }
 
 #later {
@@ -18,10 +17,15 @@
 
 h1 {
     font-size: 50px;
+    color: white;
 }
 
-.btn {
+a.btn {
     font-size: 25px;
+    box-shadow: 2px 2px rgb(66, 94, 97);
+    background-color: rgb(136, 194, 201);
+    color: white;
+    border: rgb(150, 211, 218);
 }
 
 #ball
