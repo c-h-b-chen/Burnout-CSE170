@@ -16,6 +16,7 @@ function checkLoginState() {
           $('#myModal').modal('hide');
           console.log('Successfully logged in with Facebook');
           FB.api('/me?fields=name,first_name', getName);
+          sessionStorage.setItem('response.status', 'connected');
     }
   }
 
