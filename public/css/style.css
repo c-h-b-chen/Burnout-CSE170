@@ -18,6 +18,13 @@ body.page{
   background-position-x: 10%;
 }
 
+select {
+  bottom: auto;
+  padding: 10px;
+  margin: 10px 20px;
+  border-radius: .25rem;
+}
+
 
 #later {
   color: gray;
@@ -25,7 +32,6 @@ body.page{
 }
 
 .title {
-    font-size: 50px;
     color: #254a85;
 }
 
