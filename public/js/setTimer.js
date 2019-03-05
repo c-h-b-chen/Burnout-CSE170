@@ -21,7 +21,7 @@ function startTimer(duration, display) {
 
 window.onload = function () {
     //var timeChoice = document.getElementById("")
-    var timeChoice = sessionStorage.getItem("current");
+    var timeChoice = sessionStorage.getItem("currentTime");
     var fiveMinutes = 60 * timeChoice,
         display = document.querySelector('#time');
     startTimer(fiveMinutes, display);

@@ -4,6 +4,6 @@ function setTime() {
     var taskIn = document.getElementById("inputLog").value;
     console.log("message "+input+taskIn);
     sessionStorage.setItem("currentTask", taskIn);
-    sessionStorage.setItem("current", input);
+    sessionStorage.setItem("currentTime", input);
     window.location.href='/breath';
 }
