@@ -23,6 +23,10 @@ function checkLoginState() {
   function getName(response) {
     var myName = response.name; 
     $('#name').text(myName);
-}
+  }
+
+  if (sessionStorage.getItem('response.status') == 'connected'){
+
+  }
 
 
