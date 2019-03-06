@@ -31,4 +31,5 @@ function checkLoginState() {
     //$('#name').innerHTML = myName;
     //document.getElementById('name').innerHTML = myName;
   }
+  document.getElementById('name').innerHTML = localStorage.getItem('myName');
 
