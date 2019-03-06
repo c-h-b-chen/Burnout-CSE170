@@ -27,7 +27,8 @@ function checkLoginState() {
   function getName(response) {
     var myName = response.name; 
     localStorage.setItem('myName', myName);
-    //$('#name').innerHTML = localStorage.getItem('myName');
-    $('#name').innerHTML = myName;
+    document.getElementById('name').innerHTML = localStorage.getItem('myName');
+    //$('#name').innerHTML = myName;
+    //document.getElementById('name').innerHTML = myName;
   }
 
