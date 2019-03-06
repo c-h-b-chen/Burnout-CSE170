@@ -26,54 +26,63 @@
 </head>
 
 <body onload="init()" class = "page mag">
-      <!-- Back Button -->
-    {{> backbutton}}
+  <!-- Back Button -->
+  {{> backbutton}}
 
-    <script>
-        $(document).ready(function() {
+  <script>
+    $(document).ready(function() {
     // document is loaded and DOM is ready
     alert("Focus on keeping the circle in the middle of the screen for as long as possible");
 });
-    </script>
+</script>
 
-    <!--magnifying glass image-->
-    <!--img src="/images/magnifying-glass.png"-->
+<!--magnifying glass image-->
+<!--img src="/images/magnifying-glass.png"-->
 
-            <div class = "container" style="margin-top:40%;">
-                <div class = "text-center">
-                    <p>
-                        <div class="fire">
-                           <div class="flames">
-                              <div class="flame"></div>
-                           </div>
-                           <div class="logs"></div>
-                        </div> 
-                    </p>
-                </div>
-            </div>
+<div class = "container" style="margin-top:40%;">
+    <div class = "text-center">
+        <p>
+            <div class="fire">
+             <div class="flames">
+              <div class="flame"></div>
+          </div>
+          <div class="logs"></div>
+      </div> 
+  </p>
+</div>
+</div>
 
 
-    <div class="magPage"></div>
-    <div id="ball"></div>
-    
-                <!--Navigation Buttons-->
-    <section class = "container">
-        <div style="position: absolute;text-align: center;right: 0;left: 0;bottom: 10%;">
-                <!--Go to page to turn phone down-->
-                <a class="btn" style="color:gray" href = "/final">
-                    <i>Skip Ahead<i>
-                </a>
+<div class="magPage"></div>
+<div id="ball"></div>
+
+<!--Navigation Buttons-->
+<section class = "container">
+    <div style="position: absolute;text-align: center;right: 0;left: 0;bottom: 10%;">
+        <!--Go to page to turn phone down-->
+        <a class="btn" style="color:gray" href = "/final">
+            <i>Skip Ahead<i>
+            </a>
         </div>
     </section>
 
-<script>
-setTimeout(function () {
+    <script>
+        setTimeout(function () {
    //Redirect with JavaScript
-  window.location.href= '/final';
+   window.location.href= '/final';
 }, 20000);
-</script>
 
-<!--Footer-->
+        function initializePage() {
+            $("#skip").click(clickSkip);
+        }
+        function clickSkip(){
+            e.preventDefault();
+            ga('create', 'UA-135653330-1', 'auto');
+            ga('send', 'event', 'skip', 'click');
+        }
+    </script>
+
+    <!--Footer-->
     <nav class = "navbar fixed-bottom">
         <div>
             <p><b>2/5</b></p>

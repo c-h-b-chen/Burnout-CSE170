@@ -91,25 +91,34 @@
    //Redirect with JavaScript
    window.location.href= '/final';
 }, 20000);
-</script>
 
-<!--Footer-->
-<nav class = "navbar fixed-bottom">
-	<div>
-		<p><b>2/3</b></p>
-	</div>
-</nav>
+				function initializePage() {
+					$("#skip").click(clickSkip);
+				}
+				function clickSkip(){
+					e.preventDefault();
+					ga('create', 'UA-135653330-1', 'auto');
+					ga('send', 'event', 'skip', 'click');
+				}
+			</script>
+
+			<!--Footer-->
+			<nav class = "navbar fixed-bottom">
+				<div>
+					<p><b>2/3</b></p>
+				</div>
+			</nav>
 
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="js/volume-meter.js"></script>
-<script src= "js/breathMeter.js"></script>
-<script src = "/js/back.js"></script>
-<script>
-	$(document).ready(function() {
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+			<script src="js/volume-meter.js"></script>
+			<script src= "js/breathMeter.js"></script>
+			<script src = "/js/back.js"></script>
+			<script>
+				$(document).ready(function() {
 			// document is loaded and DOM is ready
 			alert("Follow the on screen instructions to kindle the flame!");
 		});
