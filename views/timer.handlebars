@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <!--Title-->
-    <title>Timer</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--BootStrap-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel = "stylesheet" href = "/css/style.css">
-    <script src="js/setTimer.js"></script>
-    <script src="js/howler.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-</head>
-<body class = "page">
+    <head>
+        <!--Title-->
+        <title>Timer</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--BootStrap-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel = "stylesheet" href = "/css/style.css">
+        <script src="js/setTimer.js"></script>
+        <script src="js/howler.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    </head>
+    <body class = "page">
 
     <!--Title-->
     <section style = "background-color: transparent" class = "jumbotron">
         <div class = "text-center">
             <div><span id="time" style="font-size: 4rem;color: #254a85;"></span></div>
             <div id="selectedTime"></div>
-
             <script>
-              var thisTimer = sessionStorage.getItem("current");
-              var thisTask = sessionStorage.getItem("currentTask");
-              console.log("test: "+thisTimer+thisTask);
-              document.getElementById("selectedTime").innerHTML = thisTask;
-          </script> -->
+                var thisTimer = sessionStorage.getItem("current");
+                var thisTask = sessionStorage.getItem("currentTask");
+                console.log("test: "+thisTimer+thisTask);
+                document.getElementById("selectedTime").innerHTML = thisTask;
+            </script>
             <!-- <script>
                 var sound = new Howl({
                 src: "https://actions.google.com/sounds/v1/alarms/bugle_tune.ogg",
@@ -37,14 +36,15 @@
             });
 
                 sound.play();
-      
+                
+            </script> -->
 
 		<!--  manual audio play
 		<audio src="/audio/FireCracklingAudio.mp3" controls autoplay loop></audio>
-  -->
+		-->
 
 
-  <!-- JavaScript for Audio Play (trigger the interaction if it is facing down)-->
+        <!-- JavaScript for Audio Play (trigger the interaction if it is facing down)-->
 
         <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -69,7 +69,7 @@
         else {
             alert("Your device does not support orientation stuff");
         };
-    </script>-->
+        </script>-->
 
     <br>
 
@@ -125,5 +125,5 @@
         // };
 
     </script>
-</body>
+    </body>
 </html>
