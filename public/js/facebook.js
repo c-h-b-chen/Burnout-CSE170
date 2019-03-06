@@ -4,6 +4,7 @@ function checkLoginState() {
     });
   }
   
+  var stayConnected;
   function statusChangeCallback(response) {
     console.log('Facebook login status changed.');
     console.log(response);
@@ -12,16 +13,22 @@ function checkLoginState() {
     // Full docs on the response object can be found in the documentation
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
-      // Logged into your app and Facebook.
-          $('#myModal').modal('hide');
-          console.log('Successfully logged in with Facebook');
-          FB.api('/me?fields=name,first_name', getName);
+      localStorage.setItem(response.status, 'connected');
+
+      if (localStorage.getItem(response.status) === 'connected') {
+        // Logged into your app and Facebook.
+        $('#myModal').modal('hide');
+        console.log('Successfully logged in with Facebook');
+        FB.api('/me?fields=name,first_name', getName);
+      }
     }
   }
 
   function getName(response) {
     var myName = response.name; 
-    $('#name').text(myName);
-}
-
+    localStorage.setItem('myName', myName);
+    document.getElementById('name').innerHTML = localStorage.getItem('myName');
+    //$('#name').innerHTML = myName;
+    //document.getElementById('name').innerHTML = myName;
+  }
 

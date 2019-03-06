@@ -1,3 +1,16 @@
+div.contentbox {
+  background-color: transparent;
+  font-family: 'Quicksand', sans-serif;
+  color: #254a85;
+}
+html, body {
+  min-height: 100%;
+}
+
+body.page{
+  background-image: linear-gradient(to bottom, #c2e9fb, #a1c4fd);
+  font-family: 'Quicksand', sans-serif;
+}
 
 .mag {
   background-image: url("/images/magnifying-glass.png");
@@ -5,27 +18,37 @@
   background-position-x: 10%;
 }
 
-#fire {
-  padding-bottom: 0px;
-  background-color: rgb(108, 181, 189);
+select {
+  bottom: auto;
+  padding: 10px;
+  margin: 10px 20px;
+  border-radius: .25rem;
 }
+
 
 #later {
   color: gray;
   font-size: 19px;
 }
 
-h1 {
-    font-size: 50px;
-    color: white;
+.title {
+    color: #254a85;
 }
 
-a.btn {
+a.btn, input.btn {
     font-size: 25px;
-    box-shadow: 2px 2px rgb(66, 94, 97);
-    background-color: rgb(136, 194, 201);
     color: white;
-    border: rgb(150, 211, 218);
+    border: 10px white;
+    border: 2px solid white;
+    padding-left: 35px;
+    padding-right: 35px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+a.btn:hover {
+  background-color: white;
+  color: black;
 }
 
 #ball
@@ -115,18 +138,6 @@ input[type=text], input[type=password] {
     border: 1px solid #888;
     width: 80%;
     text-align: center;
-  }
-
-  .label {
-  
-  }
-
-  a.closed:hover {
-    font-style: italic;
-  }
-
-  a:hover{
-    font-style: italic;
   }
 
   /* Add Zoom Animation */
