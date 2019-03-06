@@ -11,6 +11,7 @@
     <link rel = "stylesheet" href = "/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="/js/skipAhead.js"></script>
     <script src = "/js/back.js"></script>
     <!-- Google Analytics -->
     <script>
@@ -27,18 +28,18 @@
 
 <body onload="init()" class = "mag">
   <section>
-            <div class = "container pt-3">
-                <a class="text-left" href = "/enterlog">
-                    <img 
-                    src = "/images/left.svg"
-                    alt = "left arrow"
-                    height = "30px"
-                    width = "30px">
-                </a>
-            </div>
-        </section>
+    <div class = "container pt-3">
+        <a class="text-left" href = "/enterlog">
+            <img 
+            src = "/images/left.svg"
+            alt = "left arrow"
+            height = "30px"
+            width = "30px">
+        </a>
+    </div>
+</section>
 
-  <script>
+<script>
     $(document).ready(function() {
     // document is loaded and DOM is ready
     alert("Focus on keeping the circle in the middle of the screen for as long as possible");
@@ -52,13 +53,13 @@
     <div class = "text-center">
         <p>
             <div class="fire">
-             <div class="flames">
-              <div class="flame"></div>
-          </div>
-          <div class="logs"></div>
-      </div> 
-  </p>
-</div>
+               <div class="flames">
+                  <div class="flame"></div>
+              </div>
+              <div class="logs"></div>
+          </div> 
+      </p>
+  </div>
 </div>
 
 
@@ -69,7 +70,7 @@
 <section class = "container">
     <div style="position: absolute;text-align: center;right: 0;left: 0;bottom: 10%;">
         <!--Go to page to turn phone down-->
-        <a class="btn" id="skip" style="color:gray" href = "/final">
+        <a style="color:gray" onclick="skipAhead()">
             <i>Skip Ahead<i>
             </a>
         </div>
@@ -77,26 +78,17 @@
 
     <script>
         setTimeout(function () {
-   //Redirect with JavaScript
-   window.location.href= '/final';
-}, 20000);
 
-        function initializePage() {
-            $("#skip").click(clickSkip);
-        }
-        function clickSkip(){
-            e.preventDefault();
-            ga('create', 'UA-135653330-1', 'auto');
-            ga('send', 'event', 'skip', 'click');
-        }
-    </script>
+         window.location.href= '/final';
+     }, 20000);
+ </script>
 
-    <!--Footer-->
-    <nav class = "navbar fixed-bottom">
-        <div>
-            <p><b>2/3</b></p>
-        </div>
-    </nav>
+ <!--Footer-->
+ <nav class = "navbar fixed-bottom">
+    <div>
+        <p><b>2/3</b></p>
+    </div>
+</nav>
 </body>
 </html>
 
