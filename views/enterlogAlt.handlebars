@@ -8,8 +8,9 @@
         <!--BootStrap-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         <link rel = "stylesheet" href = "/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     </head>
-    <body>
+    <body  class = "page">
         <br>
         <!-- Back Button -->
         {{> backbutton}}
@@ -18,7 +19,7 @@
         <!--User Input-->
         <section class = "pt-3">
             <div class = "contentbox">
-                <form  role="form" method="get" action="/addLog">
+                <form role="form" method="get" action="/addLog">
                     <h2>What task do you need to get done today?</h2>
                     <div class="form-group">
 
@@ -52,7 +53,7 @@
                             <p>How many minutes do you want to spend on this task?</p>
                         </label>
                         <div class="container" style="margin-bottom: 2rem">
-                            <select name="inputTime" id="inputTime" style="bottom: auto;padding: 10px;background: whitesmoke;margin: 10px 20px;border-radius: .25rem;">
+                            <select name="inputTime" id="inputTime">
                                 <option value="5">5</option>
                                 <option value="10">10</option>
                                 <option value="15">15</option>

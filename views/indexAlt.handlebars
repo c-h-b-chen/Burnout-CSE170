@@ -3,24 +3,26 @@
 <head>
     <meta charset="utf-8">
     <title>Home Page</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href = "/css/style.css">
     <link rel = "stylesheet" href = "/css/Fire.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <!-- Google Analytics -->
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-ga('create', 'UA-135653330-1', 'auto');
-ga('send', 'pageview');
-</script>
-<!-- End Google Analytics -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-135653330-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
 </head>
 
-<body style = "background-color: rgb(108, 181, 189)">
+<body class = "page">
     
     <!--FB-->
     <div id="fb-root"></div>
@@ -29,89 +31,93 @@ ga('send', 'pageview');
 
     <!-- Modal -->
     <div id="myModal" class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class = "modal-header" style="margin: auto;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class = "modal-header" style="margin: auto;">
                     <h4 id = "name">Log In</h4>
-            </div>
-            <div class="modal-body" style="text-align: center;">
-                   <p>Stay mindful of every task you need to accomplish:</p>
-                    <p>
-                        <!--Login with your Facebook:-->
-                        <div class="fb-login-button" scope="public_profile,email" onlogin="checkLoginState();" data-size="medium" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div>
-                    </p>
-                    <a href = "#" style="color:gray" class="closed">Later</a>
+                </div>
+                <div class="modal-body" style="text-align: center;">
+                 <p>Stay mindful of every task you need to accomplish:</p>
+                 <p>
+                    <!--Login with your Facebook:-->
+                    <div class="fb-login-button" scope="public_profile,email" onlogin="checkLoginState();" data-size="medium" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div>
+                </p>
+                <a href = "#" style="color:gray" class="closed">Later</a>
             </div>
         </div>
     </div>
 </div>
 
-      <br>
-      <!--Burnout Logo-->
-      <section style="padding: 1rem" >
-            <div class = "container">
-                <div class = "text-center">
-                    <h1 style = "color: white">Burnout</h1>
-                </div>
-            </div>
-        </section>
-        <br>
-        <br>
-
-        <!--Fire-->
-        <section id = "fire" class = "jumbotron">
-            <div class = "container">
-                <div class = "text-center">
-                    <p>
-                        <div class="fire">
-                           <div class="flames">
-                              <div class="flame"></div>
-                              <div class="flame"></div>
-                              <div class="flame"></div>
-                              <div class="flame"></div>
-                           </div>
-                           <div class="logs"></div>
-                        </div> 
-                    </p>
-                </div>
-            </div>
-        </section>
-
-    <!--Go Button-->
-    <section class = "container" style="margin-bottom: 2rem">
+<br>
+<!--Burnout Logo-->
+<section style="padding: 1rem" >
+    <div class = "container">
         <div class = "text-center">
-            <p class = "col-xs-12">
-                <!--Go to enter logs page -->
-                <a class = "btn btn-outline-dark" href = "/enterlogAlt">Go</a>
-            </p>
+            <b><h1 class = "title" style = "font-size: 50px;">Burnout</h1></b>
         </div>
+    </div>
+</section>
+<br>
+<br>
+<br>
 
+<!--Fire-->
+<section>
+    <div class = "container">
+        <div class = "text-center">
+            <p>
+                <div class="fire">
+                 <div class="flames">
+                  <div class="flame"></div>
+                  <div class="flame"></div>
+                  <div class="flame"></div>
+                  <div class="flame"></div>
+              </div>
+              <div class="logs"></div>
+          </div> 
+      </p>
+  </div>
+</div>
+</section>
+
+<br>
+
+<!--Go Button-->
+<section class = "container" style="margin-bottom: 2rem">
+    <div class = "text-center">
+        <p class = "col-xs-12">
+            <!--Go to enter logs page -->
+            <a class = "btn btn-outline" href = "/enterlogAlt">Go</a>
+        </p>
+    </div>
+</section>
+
+<section>
     <!--Past Logs Button-->
-        <div class = "text-center">
-            <p class = "col-xs-12">
-                <!--Go to enter logs page -->
-                <a class = "btn btn-outline-dark" href = "/pastlogs">History</a>
-            </p>
-        </div>
-    </section>
+    <div class = "text-center">
+        <p class = "col-xs-12">
+            <!--Go to enter logs page -->
+            <a class = "btn btn-outline" href = "/pastlogs">History</a>
+        </p>
+    </div>
+</section>
 
-    <!--Footer-->
-    <nav class = "navbar fixed-bottom">
-        <div>
-            <!--Help Page -->
-            <a href = "/help">
+<!-- Footer -->
+<nav class = "navbar fixed-bottom">
+    <div>
+        <a href = "/help">
+            <img 
+            src = "/images/question.svg"
+            alt = "help"
+            height = "35px"
+            width = "35px">
+            &nbsp;
+            <a data-toggle="modal" href = "#myModal">
                 <img 
-                src = "/images/information.svg"
+                src = "/images/download.svg"
                 alt = "help"
-                height = "35px"
-                width = "35px">
-                &nbsp;
-                <a data-toggle="modal" href = "#myModal">
-                <img 
-                src = "/images/user.svg"
-                alt = "help"
-                height = "35px"
-                width = "35px">
+                height = "31px"
+                width = "31px">
             </a>
         </div>
     </nav>
@@ -125,15 +131,13 @@ ga('send', 'pageview');
             if(sessionStorage.getItem('modState') !== 'shown') {
                 $('#myModal').modal('show');
                 sessionStorage.setItem('modState','shown');
-                console.log('show');
             }
             $('.closed').click(function(e) {
                 $('#myModal').modal('hide');
-                console.log('hidden');
             })
         });
     </script>
-     {{> facebook}}
+    {{> facebook}}
     <script src="/js/facebook.js"></script>
 </body>
 </html>
