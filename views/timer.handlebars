@@ -10,13 +10,14 @@
         <link rel = "stylesheet" href = "/css/style.css">
         <script src="js/setTimer.js"></script>
         <script src="js/howler.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     </head>
-    <body>
+    <body class = "page">
 
     <!--Title-->
-    <section class = "jumbotron">
+    <section style = "background-color: transparent" class = "jumbotron">
         <div class = "text-center">
-            <div><span id="time" style="font-size: 4rem;"></span></div>
+            <div><span id="time" style="font-size: 4rem;color: #254a85;"></span></div>
             <div id="selectedTime"></div>
             <!-- <script>
                 var sound = new Howl({
@@ -43,7 +44,7 @@
         <div class = "text-center">
             <p class = "col-xs-12">
                 <!--Finish burn pop up -->
-                <a class="btn btn-outline-dark" onclick="document.getElementById('id02').style.display='block'">End</a>
+                <a style = "color: white" class="btn btn-outline-dark" onclick="document.getElementById('id02').style.display='block'">End</a>
             </p>
         </div>
     </section>
