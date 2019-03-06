@@ -13,9 +13,9 @@ function checkLoginState() {
     // Full docs on the response object can be found in the documentation
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
-      localStorage.setItem(response.status, 'connected');
+      sessionStorage.setItem(response.status, 'connected');
 
-      if (localStorage.getItem(response.status) === 'connected') {
+      if (sessionStorage.getItem(response.status) === 'connected') {
         // Logged into your app and Facebook.
         $('#myModal').modal('hide');
         console.log('Successfully logged in with Facebook');
@@ -26,10 +26,10 @@ function checkLoginState() {
 
   function getName(response) {
     var myName = response.name; 
-    localStorage.setItem('myName', myName);
-    document.getElementById('name').innerHTML = localStorage.getItem('myName');
+    sessionStorage.setItem('myName', myName);
+    document.getElementById('name').innerHTML = sessionStorage.getItem('myName');
     //$('#name').innerHTML = myName;
     //document.getElementById('name').innerHTML = myName;
   }
-  document.getElementById('name').innerHTML = localStorage.getItem('myName');
+  document.getElementById('name').innerHTML = sessionStorage.getItem('myName');
 
