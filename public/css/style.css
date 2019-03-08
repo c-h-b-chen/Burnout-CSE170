@@ -13,7 +13,6 @@ body.page{
 }
 
 .mag {
-  background-color: #c2e9fb;
   background-image: url("/images/mag.jpg");
   background-repeat: no-repeat;
   background-position-x: 10%;
@@ -55,7 +54,7 @@ a.btn:hover, input.btn:hover, #submitBtn:hover, #end:hover {
   border: 2px solid white;
 }
 
-.skip:hover, a:hover {
+.skip:hover {
   font-style: italic;
   cursor: pointer;
 }
