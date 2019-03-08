@@ -13,9 +13,12 @@ body.page{
 }
 
 .mag {
+  background-color: #c2e9fb;
   background-image: url("/images/magnifying-glass.png");
   background-repeat: no-repeat;
   background-position-x: 10%;
+  font-family: 'Quicksand', sans-serif;
+  
 }
 
 select {
@@ -35,7 +38,7 @@ select {
     color: #254a85;
 }
 
-a.btn, input.btn {
+a.btn, input.btn, #end {
     font-size: 25px;
     color: white;
     border: 10px white;
@@ -46,9 +49,15 @@ a.btn, input.btn {
     border-radius: 50px;
 }
 
-a.btn:hover {
+a.btn:hover, input.btn:hover, #submitBtn:hover, #end:hover {
   background-color: white;
   color: black;
+  border: 2px solid white;
+}
+
+.skip:hover {
+  font-style: italic;
+  cursor: pointer;
 }
 
 #ball
@@ -154,4 +163,8 @@ input[type=text], input[type=password] {
   @keyframes animatezoom {
     from {transform: scale(0)} 
     to {transform: scale(1)}
+  }
+
+  #id02 {
+    padding-bottom: 50px;
   }

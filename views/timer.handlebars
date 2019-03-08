@@ -77,7 +77,7 @@
         <div class = "text-center">
             <p class = "col-xs-12">
                 <!--Finish burn pop up -->
-                <a style = "color: white" class="btn btn-outline-dark" onclick="document.getElementById('id02').style.display='block'">End</a>
+                <a id = "end" class="btn btn-outline" onclick="document.getElementById('id02').style.display='block'">End</a>
             </p>
         </div>
     </section>
@@ -87,12 +87,16 @@
         <form class="modal-content animate">
             <div>
                 <span onclick="document.getElementById('id02').style.display='none'" class="close">&times;</span>
+                <br>
                 <h2 style="text-align: center;">Snuffed!</h2>
                 <div class="modal-body" style="text-align: center;">
                     <p>You checked your phone too early!</p>
                     <button style="margin:5px" type="button" onclick="document.getElementById('id02').style.display='none'" class="btn btn-outline-dark" data-dismiss="modal">Continue</button>
-                    <button style="margin:5px" type="button" class="btn btn-outline-dark" id="restartButton">Restart</button>
-                    <button style="margin:5px" type="button" class="btn btn-outline-dark" id="endButton">End Activity</button>
+                </div>
+                <div>
+                    <a style="margin:5px; color: gray" id="restartButton">Restart</a> |
+                    <a style="margin:5px; color:gray" id="endButton">End Activity</a>
+                    &nbsp;
                 </div>
             </div>
         </form>

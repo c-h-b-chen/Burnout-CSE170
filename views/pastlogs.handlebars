@@ -11,33 +11,35 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <script src="js/back.js"></script>
 </head>
+
 <body class = "page">
 
-  <!--Heading-->
+  <!--Heading + Back Button -->
   <section>
-    <div class = "container pt-3">
-        <div>
-            <p>
-               {{> backbutton}}
-                <h3 class = "title text-center"> Past Logs </h3>
-                <hr>
-            </p>
-        </div>
+      <div class = "container pt-3">
+        <a class="text-left" href = "./">
+            <img 
+            src = "/images/left.svg"
+            alt = "left arrow"
+            height = "40px"
+            width = "40px">
+        </a>
+        <h3 class = "title text-center"> Past Logs </h3>
+        <hr>
+      </div>
+    </section>
+
+    <!-- List of Past Logs -->
+    {{#if logList}}
+    {{#each logList}}
+    <div class = "logList">
+    <h5 class = "mx-3">{{task}}</h5>
+    <p class = "mx-4">{{description}}</p>
     </div>
-</section>
-<script>
-    
-</script>
-{{#if logList}}
-{{#each logList}}
-<div class = "logList">
- <h5 class = "mx-3">{{task}}</h5>
- <p class = "mx-4">{{description}}</p>
-</div>
-{{/each}}
-{{else}}
-<h5 class = "mx-3">No burnouts yet</h5>
-{{/if}}
+    {{/each}}
+    {{else}}
+    <h5 class = "mx-3">No burnouts yet</h5>
+    {{/if}}
 
 
             <!--{{#each logslist}}
@@ -46,5 +48,5 @@
 			<p>{{description}}</p>
 		</div>
 		{{/each}}-->
-    </body>
-    </html>
+</body>
+</html>
