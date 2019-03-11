@@ -20,7 +20,7 @@
             <div><span id="time" style="font-size: 4rem;color: #254a85;"></span></div>
             <div id="selectedTime"></div>
             <script>
-                var thisTimer = sessionStorage.getItem("current");
+                var thisTimer = sessionStorage.getItem("currentTime");
                 var thisTask = sessionStorage.getItem("currentTask");
                 console.log("test: "+thisTimer+thisTask);
                 document.getElementById("selectedTime").innerHTML = thisTask;
@@ -108,7 +108,7 @@
             location.href = "/breath";
         };
         document.getElementById("endButton").onclick = function () {
-            location.href = "/";
+            location.href = "/pastLogs";
         };
 
         

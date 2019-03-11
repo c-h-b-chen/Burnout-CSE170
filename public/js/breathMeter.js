@@ -40,9 +40,10 @@ window.onload = function() {
     try {
         // monkeypatch getUserMedia
         navigator.getUserMedia = 
-        navigator.getUserMedia ||
+        (navigator.getUserMedia ||
         navigator.webkitGetUserMedia ||
-        navigator.mozGetUserMedia;
+        navigator.mozGetUserMedia ||
+        navigator.msGetUserMedia);
 
         // ask for an audio input
         navigator.getUserMedia(
