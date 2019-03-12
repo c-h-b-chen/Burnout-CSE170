@@ -22,7 +22,7 @@ var audioContext = null;
 var meter = null;
 var canvasContext = null;
 var WIDTH=300;
-var HEIGHT=200;
+var HEIGHT=300;
 var rafID = null;
 
 window.onload = function() {
@@ -41,9 +41,9 @@ window.onload = function() {
         // monkeypatch getUserMedia
         navigator.getUserMedia = 
         (navigator.getUserMedia ||
-        navigator.webkitGetUserMedia ||
-        navigator.mozGetUserMedia ||
-        navigator.msGetUserMedia);
+            navigator.webkitGetUserMedia ||
+            navigator.mozGetUserMedia ||
+            navigator.msGetUserMedia);
 
         // ask for an audio input
         navigator.getUserMedia(
@@ -87,20 +87,30 @@ function drawLoop( time ) {
     // clear the background
 
     canvasContext.clearRect(0,0,WIDTH,HEIGHT);
-
+    canvasContext.globalAlpha = 0.4;
+    //canvasContext.closePath();
+    //canvasContext.arc(0, 0, 0, 0, 2 * Math.PI, false);
+    //canvasContext.fill();
+    //canvasContext.stroke();
     // check if we're currently clipping
-    if (meter.checkClipping())
+    if (meter.volume > .8)
     	canvasContext.fillStyle = "red";
-    else
+    else 
     	canvasContext.fillStyle = "yellow";
-
     // draw a bar based on the current volume
-    canvasContext.fillRect(0, 0, WIDTH/4, meter.volume*HEIGHT*2.4 );
-    canvasContext.fillRect(WIDTH/4, 0, WIDTH/4, meter.volume*HEIGHT*4.4 );
-    canvasContext.fillRect(WIDTH/2, 0, WIDTH/4, meter.volume*HEIGHT*3.4 );
-    canvasContext.fillRect(WIDTH-WIDTH/4, 0, WIDTH/4, meter.volume*HEIGHT*1.4 );
+    // canvasContext.fillRect(0, 0, WIDTH/4, meter.volume*HEIGHT*2.4 );
+    // canvasContext.fillRect(WIDTH/4, 0, WIDTH/4, meter.volume*HEIGHT*4.4 );
+    // canvasContext.fillRect(WIDTH/2, 0, WIDTH/4, meter.volume*HEIGHT*3.4 );
+    // canvasContext.fillRect(WIDTH-WIDTH/4, 0, WIDTH/4, meter.volume*HEIGHT*1.4 );
+    canvasContext.beginPath();
+    canvasContext.arc(150, 150, meter.volume*150, 0, 2 * Math.PI, false);
+    canvasContext.closePath();
+    canvasContext.fill();
+    
+
     // set up the next visual callback
     rafID = window.requestAnimationFrame( drawLoop );
+
 }
 
 //Breath

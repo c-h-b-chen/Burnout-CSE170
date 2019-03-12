@@ -5,7 +5,7 @@ function setTime() {
     console.log("message "+input+taskIn);
     sessionStorage.setItem("currentTask", taskIn);
     sessionStorage.setItem("currentTime", input);
-    window.location.href='/breath';
+    window.location.href='/magnifyingglass';
 }
 
 
