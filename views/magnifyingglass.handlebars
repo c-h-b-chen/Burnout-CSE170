@@ -25,9 +25,9 @@
         ga('create', 'UA-135653330-1', 'auto');
         ga('send', 'pageview');
     </script>
-   
-<!-- End Google Analytics -->
-<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+    <!-- End Google Analytics -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 </head>
 
 <body onload="init()" class = "mag">
@@ -44,66 +44,66 @@
 </section>
 
 <script>
-        $(document).ready(function() {
-    alert("Focus on keeping the circle in the middle of the screen for as long as possible");
-});
+    $(document).ready(function() {
+        alert("Focus on keeping the circle in the middle of the screen for as long as possible");
+    });
 </script>
- 
 
-                <div class="magPage"></div>
-                <div id="ball"></div>
 
-                <!--magnifying glass image-->
-                <!--img src="/images/magnifying-glass.png"-->
-                <div class="container" style="position: absolute;">
-                    <canvas id='meter' width="300" height="300" style="margin: auto; width: 98%; height: 100%"></canvas>
-                </div>
+<div class="magPage"></div>
+<div id="ball"></div>
 
-                <div class = "container" style="margin-top:40%;">
-                    <div class = "text-center">
-                        <p>
-                            <div class="fire">
-                             <div class="flames">
-                              <div class="flame"></div>
-                          </div>
-                          <div class="logs"></div>
-                      </div> 
-                  </p>
+<!--magnifying glass image-->
+<!--img src="/images/magnifying-glass.png"-->
+<div class="container" style="position: absolute;">
+    <canvas id='meter' width="300" height="300" style="margin: auto; width: 98%; height: 100%"></canvas>
+</div>
+
+<div class = "container" style="margin-top:40%;">
+    <div class = "text-center">
+        <p>
+            <div class="fire">
+               <div class="flames">
+                  <div class="flame"></div>
               </div>
-          </div>
+              <div class="logs"></div>
+          </div> 
+      </p>
+  </div>
+</div>
 
 
-          <div class = "contentbox" style="margin: 40% auto;">
-            <h1 class="breather"></h1>
+<div class = "contentbox" style="margin: 40% auto;">
+    <h1 class="breather"></h1>
+</div>
+
+<!--Navigation Buttons-->
+<section>
+    <div style="position: absolute;text-align: center;right: 0;left: 0;bottom: 5%;">
+        <!--Go to page to turn phone down-->
+        <a class = "skip" style="color:gray;" href="/final">
+            <i>Skip Ahead</i>
+            </a>
         </div>
+    </section>
+ 
+    <script>
+        setTimeout(function () {
 
-        <!--Navigation Buttons-->
-        <section class = "container">
-            <div style="position: absolute;text-align: center;right: 0;left: 0;bottom: 5%;">
-                <!--Go to page to turn phone down-->
-                <a class = "skip" style="color:gray" onclick="skipAhead()">
-                    <i>Skip Ahead<i>
-                    </a>
-                </div>
-            </section>
+         window.location.href= '/final';
+     }, 20000);
+ </script>
 
-         <!--    <script>
-                setTimeout(function () {
+<!--Footer-->
+<nav class = "navbar fixed-bottom">
+    <div>
+        <p><b>2/3</b></p>
+    </div>
+</nav>
 
-                   window.location.href= '/final';
-               }, 20000);
-           </script> -->
-
-           <!--Footer-->
-           <nav class = "navbar fixed-bottom">
-            <div>
-                <p><b>2/3</b></p>
-            </div>
-        </nav>
-
-        <script src="js/volume-meter.js"></script>
-        <script src="js/breathMeter.js"></script>
-    </body>
-    </html>
+<script src="js/volume-meter.js"></script>
+<script src="js/breathMeter.js"></script>
+</body>
+</html>
 
 

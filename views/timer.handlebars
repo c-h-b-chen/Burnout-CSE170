@@ -8,6 +8,7 @@
         <!--BootStrap-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         <link rel = "stylesheet" href = "/css/style.css">
+        <link rel = "stylesheet" href = "/css/Fire.css">
         <script src="js/setTimer.js"></script>
         <script src="js/howler.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
@@ -19,6 +20,23 @@
         <div class = "text-center">
             <div><span id="time" style="font-size: 4rem;color: #254a85;"></span></div>
             <div id="selectedTime"></div>
+            <section style="padding-top: 50px;margin:auto;">
+    <div class = "container">
+        <div class = "text-center">
+            <p>
+                <div class="fire">
+                 <div class="flames">
+                  <div class="flame"></div>
+                  <div class="flame"></div>
+                  <div class="flame"></div>
+                  <div class="flame"></div>
+              </div>
+              <div class="logs"></div>
+          </div> 
+      </p>
+  </div>
+</div>
+</section>
             <script>
                 var thisTimer = sessionStorage.getItem("currentTime");
                 var thisTask = sessionStorage.getItem("currentTask");
@@ -105,7 +123,7 @@
     <script>
         
         document.getElementById("restartButton").onclick = function () {
-            location.href = "/breath";
+            location.href = "/magnifyingglass";
         };
         document.getElementById("endButton").onclick = function () {
             location.href = "/pastLogs";
