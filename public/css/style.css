@@ -14,6 +14,7 @@ body.page{
 
 .mag {
   background-image: url("/images/mag.jpg");
+<<<<<<< HEAD
  
   background-repeat:no-repeat;
   background-color: #a1c4fd;
@@ -21,6 +22,10 @@ body.page{
   background-position:center;*/
   /*background-position-x: 10%;
   min-height: 100%;*/
+=======
+  background-repeat: no-repeat;
+  background-position-x: 10%;
+>>>>>>> parent of 3c897bb... added background image and smoke for mag page
   font-family: 'Quicksand', sans-serif;
   
 }
