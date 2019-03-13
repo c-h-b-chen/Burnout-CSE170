@@ -90,7 +90,7 @@ function updateBall()
 	ball.style.top = ball.position.y + "px"
 	ball.style.left = ball.position.x + "px"
 
-    requestAnimationFrame( update );//KEEP ANIMATING
+    requestAnimationFrame( updateBall );//KEEP ANIMATING
 }
 
 
