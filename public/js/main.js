@@ -37,6 +37,7 @@ var h;
 
 function init()
 {
+	getMedi();
 	ball = document.getElementById("ball");
 	w = window.innerWidth;
 	h = window.innerHeight;
@@ -93,5 +94,99 @@ function updateBall()
     requestAnimationFrame( updateBall );//KEEP ANIMATING
 }
 
+var audioContext = null;
+var meter = null;
+var canvasContext = null;
+var WIDTH=300;
+var HEIGHT=300;
+var rafID = null;
+
+ function getMedi() {
+
+    // grab our canvas
+    canvasContext = document.getElementById( "meter" ).getContext("2d");
+
+    // monkeypatch Web Audio
+    window.AudioContext = window.AudioContext || window.webkitAudioContext;
+
+    // grab an audio context
+    audioContext = new AudioContext();
+
+    // Attempt to get audio input
+    try {
+        // monkeypatch getUserMedia
+        navigator.getUserMedia = 
+        (navigator.getUserMedia ||
+            navigator.webkitGetUserMedia ||
+            navigator.mozGetUserMedia ||
+            navigator.msGetUserMedia);
+
+        // ask for an audio input
+        navigator.getUserMedia(
+        {
+        	"audio": {
+        		"mandatory": {
+        			"googEchoCancellation": "false",
+        			"googAutoGainControl": "false",
+        			"googNoiseSuppression": "false",
+        			"googHighpassFilter": "false"
+        		},
+        		"optional": []
+        	},
+        }, gotStream, didntGetStream);
+    } catch (e) {
+    	alert('getUserMedia threw exception :' + e);
+    }
+
+}
+
+
+function didntGetStream() {
+	alert('Stream generation failed.');
+}
+
+var mediaStreamSource = null;
+
+function gotStream(stream) {
+    // Create an AudioNode from the stream.
+    mediaStreamSource = audioContext.createMediaStreamSource(stream);
+
+    //Create a new volume meter and connect it.
+    meter = createAudioMeter(audioContext);
+    mediaStreamSource.connect(meter);
+    //kick off the visual updating
+    drawLoop();
+}
+
+
+function drawLoop( time ) {
+    // clear the background
+
+    canvasContext.clearRect(0,0,WIDTH,HEIGHT);
+    canvasContext.globalAlpha = 0.4;
+    //canvasContext.closePath();
+    //canvasContext.arc(0, 0, 0, 0, 2 * Math.PI, false);
+    //canvasContext.fill();
+    //canvasContext.stroke();
+    // check if we're currently clipping
+    if (meter.volume > .8)
+    	canvasContext.fillStyle = "red";
+    else 
+    	canvasContext.fillStyle = "yellow";
+    // draw a bar based on the current volume
+    // canvasContext.fillRect(0, 0, WIDTH/4, meter.volume*HEIGHT*2.4 );
+    // canvasContext.fillRect(WIDTH/4, 0, WIDTH/4, meter.volume*HEIGHT*4.4 );
+    // canvasContext.fillRect(WIDTH/2, 0, WIDTH/4, meter.volume*HEIGHT*3.4 );
+    // canvasContext.fillRect(WIDTH-WIDTH/4, 0, WIDTH/4, meter.volume*HEIGHT*1.4 );
+    canvasContext.beginPath();
+    canvasContext.arc(150, 150, meter.volume*150, 0, 2 * Math.PI, false);
+    canvasContext.closePath();
+    canvasContext.fill();
+    
+
+    // set up the next visual callback
+    rafID = window.requestAnimationFrame( drawLoop );
+
+}
 
 
