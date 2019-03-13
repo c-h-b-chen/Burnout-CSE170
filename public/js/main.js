@@ -59,10 +59,10 @@ function init()
 		alert("Sorry, your browser doesn't support Device Orientation");
 	} ;
 
-	update();
+	updateBall();
 }
 
-function update()
+function updateBall()
 {
 	ball.position.x += ball.velocity.x;
 	ball.position.y += ball.velocity.y;
