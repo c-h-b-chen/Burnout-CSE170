@@ -9,17 +9,18 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <script src="js/main.js"></script>
     <link rel = "stylesheet" href = "/css/style.css">
-    <link rel = "stylesheet" href = "/css/Smoke.css">
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="/js/skipAhead.js"></script>
     <script src = "/js/back.js"></script>
+    <script src="js/volume-meter.js"></script>
+    <script src="js/breathMeter.js"></script>
 
-    <!-- End Google Analytics -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 </head>
 
-<body onload="init()" >
+<body onload="init()" class="mag">
   <section>
     <div class = "container pt-3">
         <a class="text-left" href = "/enterlog">
@@ -58,26 +59,26 @@
       </p>
   </div>
 </div> -->
- 
+
 <!-- <div class="magPage"></div> -->
-    <div id="ball"></div>
-   
+<div id="ball"></div>
 
 
-<div class = "contentbox" style="margin: 20% auto;position: relative;">
+
+<!-- <div class = "contentbox" style="margin: 20% auto;position: relative;">
     <h1 class="breather"></h1>
 </div>
-
+ -->
 <!--Navigation Buttons-->
 <section>
     <div style="position: absolute;text-align: center;right: 0;left: 0;bottom: 5%;">
         <!--Go to page to turn phone down-->
         <a class = "skip" style="color:gray;" href="/final">
             <i>Skip Ahead</i>
-            </a>
-        </div>
-    </section>
- 
+        </a>
+    </div>
+</section>
+
 <!--  <script>
         setTimeout(function () {
 
@@ -85,15 +86,14 @@
      }, 20000);
  </script>  -->
 
-<!--Footer-->
-<nav class = "navbar fixed-bottom">
+ <!--Footer-->
+ <nav class = "navbar fixed-bottom">
     <div>
         <p><b>2/3</b></p>
     </div>
 </nav>
 
-<script src="js/volume-meter.js"></script>
-<script src="js/breathMeter.js"></script>
+
 </body>
 </html>
 
