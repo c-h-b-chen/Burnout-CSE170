@@ -130,16 +130,14 @@
         };
 
         
-        var trigger = 200;
-
         if (window.DeviceOrientationEvent) {
-            window.addEventListener("deviceorientation", function updateTrigger(event)
+
+            window.addEventListener("deviceorientation", function(event)
             {
-                trigger = event.beta;
-            })
-            if((trigger < 30) && (trigger > 20) || (trigger < -20) && (trigger > -30)) {
-                    document.getElementById('id02');
+                if((event.beta > - 120) && (event.beta < - 60) || (event.beta < 120) && (event.beta > 60 )) {
+                    document.getElementById("id02").style.display='block';
                 }
+            })
         }
         else {
             alert("Your device does not support orientation stuff");
