@@ -31,6 +31,7 @@
 </head>
 
 <body onload="init()" class = "mag">
+   
   <section>
     <div class = "container pt-3">
         <a class="text-left" href = "/enterlog">
@@ -58,7 +59,7 @@
     <canvas id='meter' width="300" height="300" style="margin: auto; width: 98%; height: 100%"></canvas>
 </div>
 
-<div class = "container" style="margin-top:40%;">
+<div class = "container" style="margin-top:40%;position: relative;">
     <div class = "text-center">
         <p>
             <div class="smoke">
@@ -71,12 +72,12 @@
       </p>
   </div>
 </div>
-
+ <div id="ball"></div>
 <div class="magPage"></div>
-<div id="ball"></div>
 
 
-<div class = "contentbox" style="margin: 40% auto;">
+
+<div class = "contentbox" style="margin: 20% auto;position: relative;">
     <h1 class="breather"></h1>
 </div>
 
@@ -90,12 +91,12 @@
         </div>
     </section>
  
- <script>
+<!--  <script>
         setTimeout(function () {
 
          window.location.href= '/final';
      }, 20000);
- </script> 
+ </script>  -->
 
 <!--Footer-->
 <nav class = "navbar fixed-bottom">
