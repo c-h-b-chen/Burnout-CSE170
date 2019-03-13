@@ -134,7 +134,7 @@
 
             window.addEventListener("deviceorientation", function(event)
             {
-                if((event.beta > - 120) && (event.beta < - 60) || (event.beta < 120) && (event.beta > 60 )) {
+                if((event.gamma > 70)|| (event.gamma < -70)) {
                     document.getElementById("id02").style.display='block';
                 }
             })
